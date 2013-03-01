@@ -46,3 +46,15 @@ Spare-Parts
     .push {
      height: 500px;
     }
+    
+#Responsive
+
+    // IPHONE LANDSCAPE
+    @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    
+    }
+
+    // IPHONE PORTRAIT
+    @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+    
+    }
