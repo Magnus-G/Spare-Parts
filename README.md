@@ -71,7 +71,9 @@ Neat SCSS includes
     @include span-columns(6);
 
 The last column in a row
+
     @include omega(); 
 
 A column fills up half of a column  
+
     @include span-columns(3 of 6); 
