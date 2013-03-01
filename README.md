@@ -46,6 +46,12 @@
      height: 500px;
     }
     
+    
+    
+    
+    
+    
+    
 #Responsive
 
     // IPHONE LANDSCAPE
@@ -57,3 +63,11 @@
     @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
     
     }
+
+Neat SCSS includes
+
+    @include outer-container;
+    #
+    @include span-columns(6);
+    @include omega(); // The last column in a row
+    @include span-columns(3 of 6); // A column fills up half of a column  
