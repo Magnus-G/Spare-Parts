@@ -4,6 +4,7 @@
     <span class="big">Big</span>
     <span class="small">Small</span>
 
+
     .big {
       font-size: 23px;
     }
@@ -14,6 +15,7 @@
 ###Fixed header
 
     <header>Fixed</header>
+
 
     header {
      width: 100%;
@@ -31,6 +33,7 @@
       </div>
       <div class="footer"></div>
     </div>
+
 
     .stickyfooter {
       min-height: 100%;
@@ -63,6 +66,7 @@
       </tr>
     </table>
 
+
     table {
       width: 100%;
     }
@@ -85,6 +89,11 @@
     table tr:nth-child(even) {
       background: #eee;
     }
+    
+    
+    
+    
+    
     
     
     
