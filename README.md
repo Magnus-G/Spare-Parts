@@ -69,5 +69,9 @@ Neat SCSS includes
     @include outer-container;
 #
     @include span-columns(6);
-    @include omega(); // The last column in a row
-    @include span-columns(3 of 6); // A column fills up half of a column  
+
+The last column in a row
+    @include omega(); 
+
+A column fills up half of a column  
+    @include span-columns(3 of 6); 
