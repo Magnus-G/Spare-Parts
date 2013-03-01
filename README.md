@@ -26,10 +26,12 @@ Spare-Parts
 ###Sticky footer
 
     <div class="stickyfooter">
-      ...content...
-      <div class="push"></div>
+      <div class="content">
+        ...content...
+        <div class="push"></div>
+      </div>
+      <div class="footer"></div>
     </div>
-    <div class="footer"></div>
 
     .stickyfooter {
       min-height: 100%;
