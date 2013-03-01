@@ -22,3 +22,24 @@ Spare-Parts
      color: white;
      position: fixed;
     }
+    
+###Sticky footer
+
+    <div class="stickyfooter">
+      ...content...
+      <div class="push"></div>
+    </div>
+
+    .stickyfooter {
+      min-height: 100%;
+      height:auto !important;
+      height: 100%;
+      margin: 0 auto -500px;
+    }
+    .footer {
+      background-color: black;
+      height: 500px;
+    }
+    .push {
+     height: 500px;
+    }
