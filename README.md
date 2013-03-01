@@ -2,8 +2,8 @@ Spare-Parts
 ===========
 
 ###Baseline aligned texts, different size
-    <span class="big">Hej</span>
-    <span class="small">hej</span>
+    <span class="big">Big</span>
+    <span class="small">Small</span>
 
     .big {
       font-size: 23px;
