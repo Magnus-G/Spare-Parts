@@ -45,7 +45,46 @@
     .push {
      height: 500px;
     }
+
+###Table
     
+    <table>
+      <tr>
+        <th>Heading</th>
+        <th>Heading</th>
+      </tr>
+      <tr>
+        <td>Data</td>
+        <td>★★★</td>
+      </tr>
+      <tr>
+        <td>Data</td>
+        <td>★★★★</td>
+      </tr>
+    </table>
+
+    table {
+      width: 100%;
+    }
+    table th,
+    table td {
+      padding: 10px 20px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    table th {
+      border-width: 2px;
+    }
+    table td {
+      color: #666;
+    }
+    table tr:last-child th,
+    table tr:last-child td {
+      border-bottom: none;
+    }
+    table tr:nth-child(even) {
+      background: #eee;
+    }
     
     
     
