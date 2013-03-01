@@ -11,4 +11,14 @@ Spare-Parts
     .small {
       font-size: 13px;
     }
-	
+
+###Fixed header
+
+    <header>Fixed</header>
+
+    header {
+     width: 100%;
+     background-color: black;
+     color: white;
+     position: fixed;
+    }
