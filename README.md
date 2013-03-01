@@ -116,3 +116,40 @@ The last column in a row
 A column fills up half of a column  
 
     @include span-columns(3 of 6); 
+    
+No margin gutters
+
+    <div class="contain">
+      <div class="table">
+        <div class="column">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam neque officia dolorem</p>
+        </div>
+        <div class="column-last">
+          <p>two</p>
+        </div>
+      </div>
+    </div>
+
+
+    .contain {
+      @include outer-container;
+    }
+    
+    .table {
+      @include span-columns(12);
+      @include row(table);
+    }
+    
+    .column {
+      @include span-columns(6, table);
+      background-color: teal;
+    }
+    
+    .column-last {
+      @include span-columns(6, table);
+      background-color: gray;
+    }
+
+
+
+
