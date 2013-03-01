@@ -29,6 +29,7 @@ Spare-Parts
       ...content...
       <div class="push"></div>
     </div>
+    <div class="footer"></div>
 
     .stickyfooter {
       min-height: 100%;
