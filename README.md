@@ -1,7 +1,25 @@
 #Variables
 
-$space: 10px; <br>
-$radius: $space/2;
+$base: 10px; 
+<br>
+$radius: 5px;
+<br>
+$warning-color: yellow;
+<br>
+$default-color: silver;
+<br>
+$important-color: red;
+<br>
+$standard-color: gray;
+<br>
+$light-color: lighten($standard-color, 20);
+<br>
+$dark-color: darken($standard-color, 20);
+<br>
+$black-color: black;
+<br>
+$white-color: white;
+<br>
 
 #HTML, CSS
 
