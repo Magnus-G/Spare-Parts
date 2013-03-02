@@ -31,9 +31,17 @@ $important-color: red;
 
 ###Dropdown menu
 
+###Button
+
 ###Button group
 
 ###Tabs
+
+###Card
+image, link, header, text, read more...
+
+###Avatar & Comment
+slats...
 
 ###Baseline aligned texts, different size
     <span class="big">Big</span>
