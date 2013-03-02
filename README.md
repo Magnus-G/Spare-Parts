@@ -1,4 +1,13 @@
+#Variables
+
+$space: 10px;
+$radius: $space/2;
+
 #HTML, CSS
+
+###Dropdown menu
+
+###Button group
 
 ###Baseline aligned texts, different size
     <span class="big">Big</span>
@@ -98,6 +107,15 @@
     
     
     
+    
+    
+#Mixins
+
+###Button
+Sending in color
+
+###Inset
+Sending in color
     
     
 #Responsive
