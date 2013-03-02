@@ -3,23 +3,29 @@
 $base: 10px; 
 <br>
 $radius: 5px;
+<br><br>
+
+$default-color: gray;
 <br>
-$warning-color: yellow;
+$light-color: lighten($default-color, 20);
 <br>
-$default-color: silver;
-<br>
-$important-color: red;
-<br>
-$standard-color: gray;
-<br>
-$light-color: lighten($standard-color, 20);
-<br>
-$dark-color: darken($standard-color, 20);
+$dark-color: darken($default-color, 20);
 <br>
 $black-color: black;
 <br>
 $white-color: white;
 <br>
+$warning-color: yellow;
+<br>
+$important-color: red;
+<br>
+
+
+
+
+
+
+
 
 #HTML, CSS
 
