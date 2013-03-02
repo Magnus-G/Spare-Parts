@@ -1,6 +1,6 @@
 #Variables
 
-$space: 10px;
+$space: 10px; <br>
 $radius: $space/2;
 
 #HTML, CSS
@@ -8,6 +8,8 @@ $radius: $space/2;
 ###Dropdown menu
 
 ###Button group
+
+###Tabs
 
 ###Baseline aligned texts, different size
     <span class="big">Big</span>
