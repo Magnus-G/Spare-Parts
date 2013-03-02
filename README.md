@@ -41,7 +41,32 @@ $important-color: red;
 image, link, header, text, read more...
 
 ###Avatar & Comment
-slats...
+
+     <div class="comment">
+      <div class="avatar"></div>
+      <div>
+        <h3>Name Lastname</h3>
+        <h4>Timestamp</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+     </div>
+     
+     
+    .comment {
+      p {
+        margin-left: 60px; // avatar width + margin-right
+      }
+      h3, h4 {
+        display: inline;
+      }
+      .avatar {
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        float: left;
+        margin-right: 10px;
+      }
+    }
 
 ###Baseline aligned texts, different size
     <span class="big">Big</span>
@@ -152,6 +177,21 @@ Sending in color
 
 ###Inset
 Sending in color
+    
+    
+    
+    
+    
+    
+    
+
+#Animations
+
+###Shake (TIL)
+    
+    
+    
+    
     
     
 #Responsive
