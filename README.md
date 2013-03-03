@@ -79,12 +79,12 @@ $important-color: red;
 
 ###Button
 
-Rubber. Thick borders and highlight/shade. No gradients.
+Rubber button. Thick borders and highlight/shade. No gradients.
 
      <a href=""><div class="btn">Rubber button</div></a>
      
 
-     .btn { 
+     .btn {
        $highlight: transparentize($white-color, .7);
        $shade: darken($default-color, 20);
        background-color: $default-color;
@@ -93,6 +93,9 @@ Rubber. Thick borders and highlight/shade. No gradients.
        padding: 10px;
        text-transform: uppercase;
        display: inline;
+       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+       box-sizing: border-box;
        font-weight: bold;
        text-shadow: 0 1px 2px $shade;
        border-radius: $radius;
@@ -107,12 +110,15 @@ Rubber. Thick borders and highlight/shade. No gradients.
        
        &:active {
          background-color: darken($default-color, 3);
+         color: darken($white-color, 20);
          box-shadow:
            inset 0 1px 0 $shade, // top
            0 1px 2px $highlight, // bottom
            inset 0 -1px 0 darken($highlight, 30); // bottom
        }
      }
+
+
      
      
 
