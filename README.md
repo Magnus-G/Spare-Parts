@@ -78,6 +78,8 @@ $important-color: red;
 
 ###Button
 
+Button base (make). Add style as second class
+
 Rubber button. Thick borders and highlight/shade. No gradients.
 
      <a href=""><div class="btn">Rubber button</div></a>
