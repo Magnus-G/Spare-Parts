@@ -31,6 +31,52 @@ $important-color: red;
 
 ###Dropdown menu
 
+     <div class="dropdown">
+          <a tabindex="1">Hover here</a>
+          <ul>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+          </ul>
+     </div>
+     
+
+     .dropdown {
+     
+       a {
+         cursor: pointer;
+         position: relative;
+       }
+     
+       &:hover ul {
+         display: block;
+       }
+     
+       ul { // dropdown
+         display: none;
+         left: 0px;
+         position: absolute;
+         padding: 10px;
+         padding-bottom: 20px;
+         background-color: gray;
+         margin: 0;
+     
+         li {
+           list-style: none;
+           margin: 0;
+     
+           a { // each item in dropdown
+             background-color: transparent;
+             color: black;
+             padding: 10px;
+             width: 200px;
+             &:hover {
+               color: blue;
+             }
+           }
+         }
+       }
+     }
+
 ###Button
 
 ###Button group
