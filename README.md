@@ -101,6 +101,7 @@ Thick borders and
        &:hover {
          background-color: lighten($default-color, 3);
        }
+       
        &:active {
          background-color: darken($default-color, 3);
          box-shadow:
