@@ -94,9 +94,6 @@ Rubber button. Thick borders and highlight/shade. No gradients.
        padding: 10px;
        text-transform: uppercase;
        display: inline;
-       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-       -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-       box-sizing: border-box;
        font-weight: bold;
        text-shadow: 0 1px 2px $shade;
        border-radius: $radius;
