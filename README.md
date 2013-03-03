@@ -41,7 +41,6 @@ $important-color: red;
      
 
      .dropdown {
-     
        a {
          cursor: pointer;
          position: relative;
