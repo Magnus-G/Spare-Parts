@@ -79,6 +79,40 @@ $important-color: red;
 
 ###Button
 
+Thick borders and 
+
+     .btn { 
+       $highlight: transparentize($white-color, .7);
+       $shade: darken($default-color, 20);
+       background-color: $default-color;
+       border: 2px solid darken($default-color, 7);
+       color: $white-color;
+       padding: 10px;
+       text-transform: uppercase;
+       display: inline;
+       font-weight: bold;
+       text-shadow: 0 1px 2px $shade;
+       border-radius: $radius;
+       box-shadow:
+         inset 0 1px 0 $highlight, // top
+         0 1px 2px $highlight, // bottom
+         inset 0 -1px 0 $shade; // bottom
+     
+       &:hover {
+         background-color: lighten($default-color, 3);
+       }
+       &:active {
+         background-color: darken($default-color, 3);
+         box-shadow:
+           inset 0 1px 0 $shade, // top
+           0 1px 2px $highlight, // bottom
+           inset 0 -1px 0 darken($highlight, 30); // bottom
+       }
+     }
+     
+     
+
+
 ###Button group
 
 ###Tabs
