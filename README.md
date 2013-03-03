@@ -79,7 +79,7 @@ $important-color: red;
 
 ###Button
 
-Thick borders and 
+Rubber. Thick borders and highlight/shade. No gradients.
 
      .btn { 
        $highlight: transparentize($white-color, .7);
