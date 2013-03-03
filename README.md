@@ -81,6 +81,9 @@ $important-color: red;
 
 Rubber. Thick borders and highlight/shade. No gradients.
 
+     <a href=""><div class="btn">Rubber button</div></a>
+     
+
      .btn { 
        $highlight: transparentize($white-color, .7);
        $shade: darken($default-color, 20);
