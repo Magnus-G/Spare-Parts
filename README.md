@@ -202,6 +202,8 @@ image, link, header, text, read more...
      position: fixed;
     }
     
+###Header with logo, nav and link on right side
+
 ###Sticky footer
 
     <div class="stickyfooter">
