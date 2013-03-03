@@ -122,9 +122,9 @@ Rubber button. Thick borders and highlight/shade. No gradients.
 ###Button group
 
      <div class="btn-group">
-       <a href=""><div class="btn">rubber button</div></a>
-       <a href=""><div class="btn"> button</div></a>
-       <a href=""><div class="btn">rubber button</div></a>
+       <a href=""><div class="btn">Button</div></a>
+       <a href=""><div class="btn">Button</div></a>
+       <a href=""><div class="btn">Button</div></a>
      </div>
      
      
