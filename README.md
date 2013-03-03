@@ -78,8 +78,6 @@ $important-color: red;
 
 ###Button
 
-Button base (make). Add style as second class
-
 Rubber button. Thick borders and highlight/shade. No gradients.
 
      <a href=""><div class="btn">Rubber button</div></a>
@@ -122,6 +120,30 @@ Rubber button. Thick borders and highlight/shade. No gradients.
 
 
 ###Button group
+
+     <div class="btn-group">
+       <a href=""><div class="btn">rubber button</div></a>
+       <a href=""><div class="btn"> button</div></a>
+       <a href=""><div class="btn">rubber button</div></a>
+     </div>
+     
+     
+     .btn-group {
+       a {
+         margin-right: -5px; // space between inline block elements
+         .btn {
+           border-radius: 0;
+         }
+       }
+        a:first-child .btn {
+         border-top-left-radius: $radius;
+         border-bottom-left-radius: $radius;
+       }
+        a:last-child .btn {
+         border-top-right-radius: $radius;
+         border-bottom-right-radius: $radius;
+       }
+     }
 
 ###Tabs
 
