@@ -130,7 +130,7 @@ Rubber button. Thick borders and highlight/shade. No gradients.
      
      .btn-group {
        a {
-         margin-right: -5px; // space between inline block elements
+         float: left;
          .btn {
            border-radius: 0;
          }
