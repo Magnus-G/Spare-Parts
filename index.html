@@ -14,9 +14,10 @@
       <aside>
         <ul>
           <li><a href="#variables">Variables</a></li>
-          <li><a href="#dropdown">Dropdown menu</a></li>
+          <li><a href="#dropdown-menu">Dropdown menu</a></li>
           <li><a href="#button">Button</a>
           <li><a href="#button-group">Button Group</a>
+          <li><a href="#avatar-and-comment">Avatar & Comment</a>
         </ul>
         <div class="clear"></div>
       </aside>
@@ -167,10 +168,34 @@
         </article>
 
         <article>
-          <h3 id=""></h3>
+          <h3 id="avatar-and-comment">Avatar & Comment</h3>
           <pre>
             <xmp>
-
+              <div class="comment">
+                <div class="avatar"></div>
+                <div>
+                  <h3>Name Lastname</h3>
+                  <h4>Timestamp</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+               </div>
+              
+              
+              .comment {
+                p {
+                  margin-left: 60px; // avatar width + margin-right
+                }
+                h3, h4 {
+                  display: inline;
+                }
+                .avatar {
+                  height: 50px;
+                  width: 50px;
+                  background-color: black;
+                  float: left;
+                  margin-right: 10px;
+                }
+              }
             </xmp>
           </pre>
         </article>
