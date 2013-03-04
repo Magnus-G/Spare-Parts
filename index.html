@@ -4,48 +4,183 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+  <script src="jquery.localscroll.js" type="text/javascript"></script>
+  <script src="jquery.scrollTo.js" type="text/javascript"></script>
 </head>
+
   <body>
-    <aside>
-      <h1>Spare Parts</h1>
-      <a href="">
-        Variables
-      </a>
-      <a href="">
-        Dropdown menu
-      </a>
-      <div class="clear"></div>
-    </aside>
-
-    <section>
-      <h3>
-        Variables
-      </h3>
-      <pre>
-        $base: 10px;
-        <br>
-        $radius: 5px;
-        <br><br>
-
-        $default-color: gray;
-        <br>
-        $light-color: lighten($default-color, 20);
-        <br>
-        $dark-color: darken($default-color, 20);
-        <br>
-        $black-color: black;
-        <br>
-        $white-color: white;
-        <br>
-        $warning-color: yellow;
-        <br>
-        $important-color: red;
-        <br>
+    <div class="container">
+      <aside>
+        <ul>
+          <li><a href="#variables">Variables</a></li>
+          <li><a href="#dropdown">Dropdown menu</a></li>
+          <li><a href="#button">Button</a>
+        </ul>
+        <div class="clear"></div>
+      </aside>
 
 
-      </pre>
-    </section>
+      <section>
+        <h3 id="variables">
+          Variables
+        </h3>
+        <pre>
+          <xmp>
+            $base: 10px;
+            $radius: 5px;
+
+            $default-color: gray;
+            $light-color: lighten($default-color, 20);
+            $dark-color: darken($default-color, 20);
+            $black-color: black;
+            $white-color: white;
+            $warning-color: yellow;
+            $important-color: red;
+          </xmp>
+        </pre>
+        <article>
+          <h3 id="dropdown">
+            Dropdown Menu
+          </h3>
+          <pre>
+            <xmp>
+              <div class="dropdown">
+                 <a tabindex="1">Hover here</a>
+                 <ul>
+                   <li><a href="">Link</a></li>
+                   <li><a href="">Link</a></li>
+                 </ul>
+               </div>
+
+               .dropdown {
+                 a {
+                   cursor: pointer;
+                   position: relative;
+                 }
+
+                 &:hover ul {
+                   display: block;
+                 }
+
+                 ul { // dropdown
+                   display: none;
+                   left: 0px;
+                   position: absolute;
+                   padding: 10px;
+                   padding-bottom: 20px;
+                   background-color: gray;
+                   margin: 0;
+
+                   li {
+                     list-style: none;
+                     margin: 0;
+
+                     a { // each item in dropdown
+                       background-color: transparent;
+                       color: black;
+                       padding: 10px;
+                       width: 200px;
+                       &:hover {
+                         color: blue;
+                       }
+                     }
+                   }
+                 }
+               }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="button">Button</h3>
+          <p>Rubber button. Thick borders and highlight/shade. No gradients.</p>
+          <pre>
+            <xmp>
+              <a href=""><div class="btn">Rubber button</div></a>
 
 
+               .btn {
+                 $highlight: transparentize($white-color, .7);
+                 $shade: darken($default-color, 20);
+                 background-color: $default-color;
+                 border: 2px solid darken($default-color, 7);
+                 color: $white-color;
+                 padding: 10px;
+                 text-transform: uppercase;
+                 display: inline;
+                 font-weight: bold;
+                 text-shadow: 0 1px 2px $shade;
+                 border-radius: $radius;
+                 box-shadow:
+                   inset 0 1px 0 $highlight, // top
+                   0 1px 2px $highlight, // bottom
+                   inset 0 -1px 0 $shade; // bottom
+
+                 &:hover {
+                   background-color: lighten($default-color, 3);
+                 }
+
+                 &:active {
+                   background-color: darken($default-color, 3);
+                   color: darken($white-color, 20);
+                   box-shadow:
+                     inset 0 1px 0 $shade, // top
+                     0 1px 2px $highlight, // bottom
+                     inset 0 -1px 0 darken($highlight, 30); // bottom
+                 }
+               }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id=""></h3>
+          <pre>
+            <xmp>
+
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id=""></h3>
+          <pre>
+            <xmp>
+
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id=""></h3>
+          <pre>
+            <xmp>
+
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id=""></h3>
+          <pre>
+            <xmp>
+
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id=""></h3>
+          <pre>
+            <xmp>
+
+            </xmp>
+          </pre>
+        </article>
+
+
+      </section>
+    </div>
   </body>
 </html>

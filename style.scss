@@ -1,3 +1,5 @@
+$font-size: 12px;
+
 html {
   height: 100%;
 }
@@ -9,21 +11,46 @@ body {
 
 a {
   display: block;
+  font-size: $font-size;
+  text-decoration: none;
+  line-height: $font-size *1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
 }
 
 aside {
   width: 20%;
-  background-color: white;
-  height: 100%;
   float: left;
-  border-right: 1px solid black;
+  position: relative;
+  height: 100%;
+
+  ul {
+    position: fixed;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
 }
 
 section {
-  padding-left: 20px;
+  width: 80%;
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 
 pre {
   background-color: #EEE;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+xmp {
+ margin: 0;
+ padding: 0;
 }
