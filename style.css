@@ -1,0 +1,35 @@
+/* line 1, style.scss */
+html {
+  height: 100%;
+}
+
+/* line 5, style.scss */
+body {
+  font-family: helvetica;
+  height: 100%;
+}
+
+/* line 10, style.scss */
+a {
+  display: block;
+}
+
+/* line 14, style.scss */
+aside {
+  width: 20%;
+  background-color: white;
+  height: 100%;
+  float: left;
+  border-right: 1px solid black;
+}
+
+/* line 22, style.scss */
+section {
+  padding-left: 20px;
+}
+
+/* line 26, style.scss */
+pre {
+  background-color: #EEE;
+  padding: 10px;
+}

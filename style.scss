@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: helvetica;
+  height: 100%;
+}
+
+a {
+  display: block;
+}
+
+aside {
+  width: 20%;
+  background-color: white;
+  height: 100%;
+  float: left;
+  border-right: 1px solid black;
+}
+
+section {
+  padding-left: 20px;
+}
+
+pre {
+  background-color: #EEE;
+  padding: 10px;
+}
