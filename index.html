@@ -16,6 +16,7 @@
           <li><a href="#variables">Variables</a></li>
           <li><a href="#dropdown">Dropdown menu</a></li>
           <li><a href="#button">Button</a>
+          <li><a href="#button-group">Button Group</a>
         </ul>
         <div class="clear"></div>
       </aside>
@@ -135,10 +136,32 @@
         </article>
 
         <article>
-          <h3 id=""></h3>
+          <h3 id="button-group">Button Group</h3>
           <pre>
             <xmp>
-
+              <div class="btn-group">
+                 <a href=""><div class="btn">Button</div></a>
+                 <a href=""><div class="btn">Button</div></a>
+                 <a href=""><div class="btn">Button</div></a>
+               </div>
+              
+              
+               .btn-group {
+                 a {
+                   float: left;
+                   .btn {
+                     border-radius: 0;
+                   }
+                 }
+                  a:first-child .btn {
+                   border-top-left-radius: $radius;
+                   border-bottom-left-radius: $radius;
+                 }
+                  a:last-child .btn {
+                   border-top-right-radius: $radius;
+                   border-bottom-right-radius: $radius;
+                 }
+               }
             </xmp>
           </pre>
         </article>
