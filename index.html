@@ -14,38 +14,47 @@
       <aside>
         <ul>
           <li><a href="#variables">Variables</a></li>
-          <li><a href="#dropdown">Dropdown menu</a></li>
+          <li><a href="#dropdown-menu">Dropdown menu</a></li>
           <li><a href="#button">Button</a>
+          <li><a href="#button-group">Button Group</a>
+          <li><a href="#avatar-and-comment">Avatar & Comment</a>
+          <li><a href="#baseline-different-text-sizes">Baseline different text sizes</a>
+          <li><a href="#fixed-header">Fixed Header</a>
+          <li><a href="#sticky-footer">Sticky Footer</a>
+          <li><a href="#table">Table</a>
+          <li><h4>Responsive</h4></li>
+          <li><a href="#responsive-sizes">Responsive Sizes</a>
         </ul>
         <div class="clear"></div>
       </aside>
 
 
       <section>
+Input field styling
         <h3 id="variables">
           Variables
         </h3>
         <pre>
           <xmp>
-            $base: 10px;
-            $radius: 5px;
+$base: 10px;
+$radius: 5px;
 
-            $default-color: gray;
-            $light-color: lighten($default-color, 20);
-            $dark-color: darken($default-color, 20);
-            $black-color: black;
-            $white-color: white;
-            $warning-color: yellow;
-            $important-color: red;
+$default-color: gray;
+$light-color: lighten($default-color, 20);
+$dark-color: darken($default-color, 20);
+$black-color: black;
+$white-color: white;
+$warning-color: yellow;
+$important-color: red;
           </xmp>
         </pre>
         <article>
-          <h3 id="dropdown">
+          <h3 id="dropdown-menu">
             Dropdown Menu
           </h3>
           <pre>
             <xmp>
-              <div class="dropdown">
+              <div class="dropdown-menu">
                  <a tabindex="1">Hover here</a>
                  <ul>
                    <li><a href="">Link</a></li>
@@ -135,10 +144,193 @@
         </article>
 
         <article>
-          <h3 id=""></h3>
+          <h3 id="button-group">Button Group</h3>
           <pre>
             <xmp>
+              <div class="btn-group">
+                 <a href=""><div class="btn">Button</div></a>
+                 <a href=""><div class="btn">Button</div></a>
+                 <a href=""><div class="btn">Button</div></a>
+               </div>
 
+
+               .btn-group {
+                 a {
+                   float: left;
+                   .btn {
+                     border-radius: 0;
+                   }
+                 }
+                  a:first-child .btn {
+                   border-top-left-radius: $radius;
+                   border-bottom-left-radius: $radius;
+                 }
+                  a:last-child .btn {
+                   border-top-right-radius: $radius;
+                   border-bottom-right-radius: $radius;
+                 }
+               }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="avatar-and-comment">Avatar & Comment</h3>
+          <pre>
+            <xmp>
+              <div class="comment">
+                <div class="avatar"></div>
+                <div>
+                  <h3>Name Lastname</h3>
+                  <h4>Timestamp</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+               </div>
+
+
+              .comment {
+                p {
+                  margin-left: 60px; // avatar width + margin-right
+                }
+                h3, h4 {
+                  display: inline;
+                }
+                .avatar {
+                  height: 50px;
+                  width: 50px;
+                  background-color: black;
+                  float: left;
+                  margin-right: 10px;
+                }
+              }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="baseline-different-text-sizes">Baseline different text sizes</h3>
+          <pre>
+            <xmp>
+              <span class="big">Big</span>
+              <span class="small">Small</span>
+
+
+              .big {
+                font-size: 23px;
+              }
+              .small {
+                font-size: 13px;
+              }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="fixed-header">Fixed Header</h3>
+          <pre>
+            <xmp>
+              <header>Fixed</header>
+
+
+              header {
+               width: 100%;
+               background-color: black;
+               color: white;
+               position: fixed;
+              }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="sticky-footer">Sticky Footer</h3>
+          <pre>
+            <xmp>
+              <div class="stickyfooter">
+                <div class="content">
+                  ...content...
+                  <div class="push"></div>
+                </div>
+                <div class="footer"></div>
+              </div>
+
+
+              .stickyfooter {
+                min-height: 100%;
+                height:auto !important;
+                height: 100%;
+                margin: 0 auto -500px;
+              }
+              .footer {
+                background-color: black;
+                height: 500px;
+              }
+              .push {
+               height: 500px;
+              }
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="table">Table</h3>
+          <pre>
+            <xmp>
+              <table>
+                <tr>
+                  <th>Heading</th>
+                  <th>Heading</th>
+                </tr>
+                <tr>
+                  <td>Data</td>
+                  <td>★★★</td>
+                </tr>
+                <tr>
+                  <td>Data</td>
+                  <td>★★★★</td>
+                </tr>
+              </table>
+
+
+              table {
+                width: 100%;
+              }
+              table th,
+              table td {
+                padding: 10px 20px;
+                text-align: left;
+                border-bottom: 1px solid #ccc;
+              }
+              table th {
+                border-width: 2px;
+              }
+              table td {
+                color: #666;
+              }
+              table tr:last-child th,
+              table tr:last-child td {
+                border-bottom: none;
+              }
+              table tr:nth-child(even) {
+                background: #eee;
+              }
+            </xmp>
+          </pre>
+        </article>
+
+        <h2>Responsive</h2>
+
+        <article>
+          <h3 id="responsive-sizes">Responsive Sizes</h3>
+          <pre>
+            <xmp>
+              // IPHONE LANDSCAPE
+              @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+              }
+
+              // IPHONE PORTRAIT
+              @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+              }
             </xmp>
           </pre>
         </article>
@@ -151,35 +343,6 @@
             </xmp>
           </pre>
         </article>
-
-        <article>
-          <h3 id=""></h3>
-          <pre>
-            <xmp>
-
-            </xmp>
-          </pre>
-        </article>
-
-        <article>
-          <h3 id=""></h3>
-          <pre>
-            <xmp>
-
-            </xmp>
-          </pre>
-        </article>
-
-        <article>
-          <h3 id=""></h3>
-          <pre>
-            <xmp>
-
-            </xmp>
-          </pre>
-        </article>
-
-
       </section>
     </div>
   </body>
