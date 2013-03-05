@@ -1,46 +1,62 @@
-/* line 3, style.scss */
+/* line 12, style.scss */
 html {
   height: 100%;
 }
 
-/* line 7, style.scss */
+/* line 16, style.scss */
 body {
+  background-color: #fafafa;
   font-family: helvetica;
   height: 100%;
 }
 
-/* line 12, style.scss */
+/* line 22, style.scss */
+h3 {
+  color: #616161;
+}
+
+/* line 26, style.scss */
+h4 {
+  margin: 0;
+  color: #616161;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 12px 0 6px 0;
+}
+
+/* line 34, style.scss */
 a {
   display: block;
   font-size: 12px;
+  color: blue;
   text-decoration: none;
   line-height: 19.2px;
 }
 
-/* line 19, style.scss */
+/* line 42, style.scss */
 .container {
   max-width: 960px;
   margin: auto;
 }
 
-/* line 24, style.scss */
+/* line 47, style.scss */
 aside {
   width: 20%;
   float: left;
   position: relative;
   height: 100%;
 }
-/* line 30, style.scss */
+/* line 53, style.scss */
 aside ul {
   position: fixed;
   padding: 0;
 }
-/* line 34, style.scss */
+/* line 57, style.scss */
 aside ul li {
   list-style: none;
 }
 
-/* line 40, style.scss */
+/* line 63, style.scss */
 section {
   width: 80%;
   float: right;
@@ -48,14 +64,17 @@ section {
   padding: 0;
 }
 
-/* line 47, style.scss */
+/* line 70, style.scss */
 pre {
-  background-color: #EEE;
+  box-shadow: inset 0 1px 2px #e0e0e0, 0 1px 1px white;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  color: #949494;
   margin: 0;
-  padding: 0;
+  padding: 0 24px;
 }
 
-/* line 53, style.scss */
+/* line 78, style.scss */
 xmp {
   margin: 0;
   padding: 0;

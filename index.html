@@ -13,7 +13,10 @@
     <div class="container">
       <aside>
         <ul>
+          <li><h4>Sass &amp; Mixins</h4></li>
           <li><a href="#variables">Variables</a></li>
+          <li><a href="#inset">Inset</a></li>
+          <li><h4>HTML, SCSS</h4></li>
           <li><a href="#dropdown-menu">Dropdown menu</a></li>
           <li><a href="#button">Button</a>
           <li><a href="#button-group">Button Group</a>
@@ -25,15 +28,21 @@
           <li><h4>Responsive</h4></li>
           <li><a href="#responsive-sizes">Responsive Sizes</a>
         </ul>
-        <div class="clear"></div>
+
       </aside>
 
 
       <section>
-Input field styling
-        <h3 id="variables">
-          Variables
-        </h3>
+        TODO:
+        <br>
+        Input field styling
+        <br>
+        tabs
+        <br>
+        cards
+        <br>
+        <article>
+        <h3 id="variables">Variables</h3>
         <pre>
           <xmp>
 $base: 10px;
@@ -48,55 +57,69 @@ $warning-color: yellow;
 $important-color: red;
           </xmp>
         </pre>
+        </article>
+
         <article>
-          <h3 id="dropdown-menu">
-            Dropdown Menu
-          </h3>
-          <pre>
-            <xmp>
-              <div class="dropdown-menu">
-                 <a tabindex="1">Hover here</a>
-                 <ul>
-                   <li><a href="">Link</a></li>
-                   <li><a href="">Link</a></li>
-                 </ul>
-               </div>
+          <h3 id="inset">Inset</h3>
+            <pre>
+              <xmp>
+@mixin inset($body-color) {
+  box-shadow: inset 0 1px 2px darken($body-color, 10), 0 1px 1px lighten($body-color, 10);
+  background-color: darken($body-color, 3);
+}
+          </xmp>
+        </pre>
+      </article>
 
-               .dropdown {
-                 a {
-                   cursor: pointer;
-                   position: relative;
-                 }
+        <article>
+          <h3 id="dropdown-menu">Dropdown Menu</h3>
+            <pre>
+              <xmp>
 
-                 &:hover ul {
-                   display: block;
-                 }
+<div class="dropdown-menu">
+  <a tabindex="1">Hover here</a>
+  <ul>
+    <li><a href="">Link</a></li>
+    <li><a href="">Link</a></li>
+  </ul>
+</div>
 
-                 ul { // dropdown
-                   display: none;
-                   left: 0px;
-                   position: absolute;
-                   padding: 10px;
-                   padding-bottom: 20px;
-                   background-color: gray;
-                   margin: 0;
 
-                   li {
-                     list-style: none;
-                     margin: 0;
+.dropdown {
+ a {
+   cursor: pointer;
+   position: relative;
+ }
 
-                     a { // each item in dropdown
-                       background-color: transparent;
-                       color: black;
-                       padding: 10px;
-                       width: 200px;
-                       &:hover {
-                         color: blue;
-                       }
-                     }
-                   }
-                 }
-               }
+ &:hover ul {
+   display: block;
+ }
+
+ ul { // dropdown
+   display: none;
+   left: 0px;
+   position: absolute;
+   padding: 10px;
+   padding-bottom: 20px;
+   background-color: gray;
+   margin: 0;
+
+   li {
+     list-style: none;
+     margin: 0;
+
+     a { // each item in dropdown
+       background-color: transparent;
+       color: black;
+       padding: 10px;
+       width: 200px;
+       &:hover {
+         color: blue;
+       }
+     }
+   }
+ }
+}
             </xmp>
           </pre>
         </article>
@@ -106,39 +129,39 @@ $important-color: red;
           <p>Rubber button. Thick borders and highlight/shade. No gradients.</p>
           <pre>
             <xmp>
-              <a href=""><div class="btn">Rubber button</div></a>
+<a href=""><div class="btn">Rubber button</div></a>
 
 
-               .btn {
-                 $highlight: transparentize($white-color, .7);
-                 $shade: darken($default-color, 20);
-                 background-color: $default-color;
-                 border: 2px solid darken($default-color, 7);
-                 color: $white-color;
-                 padding: 10px;
-                 text-transform: uppercase;
-                 display: inline;
-                 font-weight: bold;
-                 text-shadow: 0 1px 2px $shade;
-                 border-radius: $radius;
-                 box-shadow:
-                   inset 0 1px 0 $highlight, // top
-                   0 1px 2px $highlight, // bottom
-                   inset 0 -1px 0 $shade; // bottom
+ .btn {
+   $highlight: transparentize($white-color, .7);
+   $shade: darken($default-color, 20);
+   background-color: $default-color;
+   border: 2px solid darken($default-color, 7);
+   color: $white-color;
+   padding: 10px;
+   text-transform: uppercase;
+   display: inline;
+   font-weight: bold;
+   text-shadow: 0 1px 2px $shade;
+   border-radius: $radius;
+   box-shadow:
+     inset 0 1px 0 $highlight, // top
+     0 1px 2px $highlight, // bottom
+     inset 0 -1px 0 $shade; // bottom
 
-                 &:hover {
-                   background-color: lighten($default-color, 3);
-                 }
+   &:hover {
+     background-color: lighten($default-color, 3);
+   }
 
-                 &:active {
-                   background-color: darken($default-color, 3);
-                   color: darken($white-color, 20);
-                   box-shadow:
-                     inset 0 1px 0 $shade, // top
-                     0 1px 2px $highlight, // bottom
-                     inset 0 -1px 0 darken($highlight, 30); // bottom
-                 }
-               }
+   &:active {
+     background-color: darken($default-color, 3);
+     color: darken($white-color, 20);
+     box-shadow:
+       inset 0 1px 0 $shade, // top
+       0 1px 2px $highlight, // bottom
+       inset 0 -1px 0 darken($highlight, 30); // bottom
+   }
+ }
             </xmp>
           </pre>
         </article>
@@ -147,29 +170,29 @@ $important-color: red;
           <h3 id="button-group">Button Group</h3>
           <pre>
             <xmp>
-              <div class="btn-group">
-                 <a href=""><div class="btn">Button</div></a>
-                 <a href=""><div class="btn">Button</div></a>
-                 <a href=""><div class="btn">Button</div></a>
-               </div>
+<div class="btn-group">
+   <a href=""><div class="btn">Button</div></a>
+   <a href=""><div class="btn">Button</div></a>
+   <a href=""><div class="btn">Button</div></a>
+ </div>
 
 
-               .btn-group {
-                 a {
-                   float: left;
-                   .btn {
-                     border-radius: 0;
-                   }
-                 }
-                  a:first-child .btn {
-                   border-top-left-radius: $radius;
-                   border-bottom-left-radius: $radius;
-                 }
-                  a:last-child .btn {
-                   border-top-right-radius: $radius;
-                   border-bottom-right-radius: $radius;
-                 }
-               }
+ .btn-group {
+   a {
+     float: left;
+     .btn {
+       border-radius: 0;
+     }
+   }
+    a:first-child .btn {
+     border-top-left-radius: $radius;
+     border-bottom-left-radius: $radius;
+   }
+    a:last-child .btn {
+     border-top-right-radius: $radius;
+     border-bottom-right-radius: $radius;
+   }
+ }
             </xmp>
           </pre>
         </article>
@@ -178,31 +201,29 @@ $important-color: red;
           <h3 id="avatar-and-comment">Avatar & Comment</h3>
           <pre>
             <xmp>
-              <div class="comment">
-                <div class="avatar"></div>
-                <div>
-                  <h3>Name Lastname</h3>
-                  <h4>Timestamp</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-               </div>
-
-
-              .comment {
-                p {
-                  margin-left: 60px; // avatar width + margin-right
-                }
-                h3, h4 {
-                  display: inline;
-                }
-                .avatar {
-                  height: 50px;
-                  width: 50px;
-                  background-color: black;
-                  float: left;
-                  margin-right: 10px;
-                }
-              }
+<div class="comment">
+  <div class="avatar"></div>
+  <div>
+    <h3>Name Lastname</h3>
+    <h4>Timestamp</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+ </div>
+.comment {
+  p {
+    margin-left: 60px; // avatar width + margin-right
+  }
+  h3, h4 {
+    display: inline;
+  }
+  .avatar {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    float: left;
+    margin-right: 10px;
+  }
+}
             </xmp>
           </pre>
         </article>
@@ -211,16 +232,16 @@ $important-color: red;
           <h3 id="baseline-different-text-sizes">Baseline different text sizes</h3>
           <pre>
             <xmp>
-              <span class="big">Big</span>
-              <span class="small">Small</span>
+<span class="big">Big</span>
+<span class="small">Small</span>
 
 
-              .big {
-                font-size: 23px;
-              }
-              .small {
-                font-size: 13px;
-              }
+.big {
+  font-size: 23px;
+}
+.small {
+  font-size: 13px;
+}
             </xmp>
           </pre>
         </article>
@@ -229,15 +250,15 @@ $important-color: red;
           <h3 id="fixed-header">Fixed Header</h3>
           <pre>
             <xmp>
-              <header>Fixed</header>
+<header>Fixed</header>
 
 
-              header {
-               width: 100%;
-               background-color: black;
-               color: white;
-               position: fixed;
-              }
+header {
+ width: 100%;
+ background-color: black;
+ color: white;
+ position: fixed;
+}
             </xmp>
           </pre>
         </article>
@@ -246,28 +267,28 @@ $important-color: red;
           <h3 id="sticky-footer">Sticky Footer</h3>
           <pre>
             <xmp>
-              <div class="stickyfooter">
-                <div class="content">
-                  ...content...
-                  <div class="push"></div>
-                </div>
-                <div class="footer"></div>
-              </div>
+<div class="stickyfooter">
+  <div class="content">
+    ...content...
+    <div class="push"></div>
+  </div>
+  <div class="footer"></div>
+</div>
 
 
-              .stickyfooter {
-                min-height: 100%;
-                height:auto !important;
-                height: 100%;
-                margin: 0 auto -500px;
-              }
-              .footer {
-                background-color: black;
-                height: 500px;
-              }
-              .push {
-               height: 500px;
-              }
+.stickyfooter {
+  min-height: 100%;
+  height:auto !important;
+  height: 100%;
+  margin: 0 auto -500px;
+}
+.footer {
+  background-color: black;
+  height: 500px;
+}
+.push {
+ height: 500px;
+}
             </xmp>
           </pre>
         </article>
@@ -276,44 +297,44 @@ $important-color: red;
           <h3 id="table">Table</h3>
           <pre>
             <xmp>
-              <table>
-                <tr>
-                  <th>Heading</th>
-                  <th>Heading</th>
-                </tr>
-                <tr>
-                  <td>Data</td>
-                  <td>★★★</td>
-                </tr>
-                <tr>
-                  <td>Data</td>
-                  <td>★★★★</td>
-                </tr>
-              </table>
+<table>
+  <tr>
+    <th>Heading</th>
+    <th>Heading</th>
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>★★★</td>
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>★★★★</td>
+  </tr>
+</table>
 
 
-              table {
-                width: 100%;
-              }
-              table th,
-              table td {
-                padding: 10px 20px;
-                text-align: left;
-                border-bottom: 1px solid #ccc;
-              }
-              table th {
-                border-width: 2px;
-              }
-              table td {
-                color: #666;
-              }
-              table tr:last-child th,
-              table tr:last-child td {
-                border-bottom: none;
-              }
-              table tr:nth-child(even) {
-                background: #eee;
-              }
+table {
+  width: 100%;
+}
+table th,
+table td {
+  padding: 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+table th {
+  border-width: 2px;
+}
+table td {
+  color: #666;
+}
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+table tr:nth-child(even) {
+  background: #eee;
+}
             </xmp>
           </pre>
         </article>
@@ -324,13 +345,106 @@ $important-color: red;
           <h3 id="responsive-sizes">Responsive Sizes</h3>
           <pre>
             <xmp>
-              // IPHONE LANDSCAPE
-              @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
-              }
+// IPHONE LANDSCAPE
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+}
 
-              // IPHONE PORTRAIT
-              @media screen and (max-device-width: 400px), screen and (max-width: 400px) {
-              }
+// IPHONE PORTRAIT
+@media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+}
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="sticky-footer">Sticky Footer</h3>
+          <pre>
+            <xmp>
+<div class="stickyfooter">
+  <div class="content">
+    ...content...
+    <div class="push"></div>
+  </div>
+  <div class="footer"></div>
+</div>
+
+
+.stickyfooter {
+  min-height: 100%;
+  height:auto !important;
+  height: 100%;
+  margin: 0 auto -500px;
+}
+.footer {
+  background-color: black;
+  height: 500px;
+}
+.push {
+ height: 500px;
+}
+            </xmp>
+          </pre>
+        </article>
+
+        <article>
+          <h3 id="table">Table</h3>
+          <pre>
+            <xmp>
+<table>
+  <tr>
+    <th>Heading</th>
+    <th>Heading</th>
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>★★★</td>
+  </tr>
+  <tr>
+    <td>Data</td>
+    <td>★★★★</td>
+  </tr>
+</table>
+
+
+table {
+  width: 100%;
+}
+table th,
+table td {
+  padding: 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+table th {
+  border-width: 2px;
+}
+table td {
+  color: #666;
+}
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+table tr:nth-child(even) {
+  background: #eee;
+}
+            </xmp>
+          </pre>
+        </article>
+
+        <h2>Responsive</h2>
+
+        <article>
+          <h3 id="responsive-sizes">Responsive Sizes</h3>
+          <pre>
+            <xmp>
+// IPHONE LANDSCAPE
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+}
+
+// IPHONE PORTRAIT
+@media screen and (max-device-width: 400px), screen and (max-width: 400px) {
+}
             </xmp>
           </pre>
         </article>
@@ -343,6 +457,7 @@ $important-color: red;
             </xmp>
           </pre>
         </article>
+
       </section>
     </div>
   </body>
