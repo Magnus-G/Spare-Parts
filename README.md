@@ -1,1 +1,1 @@
-#Snippets of code to be used right out of the box
+###Snippets of code to be used right out of the box
