@@ -1,22 +1,78 @@
-$body-color: darken(white, 2);
-$font-color: darken($body-color, 60);
+$default-color: darken(white, 2);
+$font-color: darken($default-color, 60);
+$contrast-color: saturate(lighten(teal, 10), 40);
 
 $font-size: 12px;
 $radius: 3px;
 
-@mixin inset($body-color) {
-  box-shadow: inset 0 1px 2px darken($body-color, 10), 0 1px 1px lighten($body-color, 10);
-  background-color: darken($body-color, 3);
+@mixin inset-area($default-color) {
+  box-shadow: inset 0 1px 2px darken($default-color, 10), 0 1px 1px lighten($default-color, 10);
+  background-color: darken($default-color, 3);
+}
+
+@mixin inset-text($default-color) {
+  color: darken($default-color, 40);
+  text-shadow: 0 1px 1px lighten($default-color, 30);
 }
 
 html {
   height: 100%;
 }
 
+header {
+ width: 100%;
+ height: 60px;
+ background-color: black;
+ color: white;
+ overflow: auto;
+ padding: 0 10px;
+
+ .logo {
+  float: left;
+  font-size: 20px;
+  line-height: 60px;
+  margin-right: 20px;
+ }
+
+ .header-controls {
+  float: right;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  line-height: 60px;
+  padding: 0 40px;
+ }
+
+ nav {
+  float: left;
+  a {
+    float: left;
+  }
+
+  ul {
+   margin: 0;
+   padding: 0;
+
+   li {
+    display: inline;
+      a {
+        display: inline;
+        line-height: 60px;
+        padding: 0 40px;
+        border-right: 1px solid gray;
+      }
+    }
+   li:first-child a {
+    border-left: 1px solid gray;
+   }
+  }
+ }
+}
+
 body {
-  background-color: $body-color;
+  background-color: $default-color;
   font-family: helvetica;
   height: 100%;
+  margin: 0;
 }
 
 p {
@@ -24,8 +80,14 @@ p {
   color: $font-color;
 }
 
-h3 {
+h2 {
   color: $font-color;
+  line-height: $font-size *3;
+  border-bottom: 1px solid lighten($font-color, 40);
+}
+
+h3 {
+  @include inset-text($default-color);
 }
 
 h4 {
@@ -41,7 +103,7 @@ h4 {
 a {
   display: block;
   font-size: $font-size;
-  color: blue;
+  color: $contrast-color;
   text-decoration: none;
   line-height: $font-size *1.6;
 }
@@ -82,13 +144,28 @@ section {
   float: right;
   margin: 0;
   padding: 0;
+  ul {
+    padding: 0 0 0 $font-size *2;
+    li {
+      font-size: $font-size;
+      margin-bottom: $font-size /2;
+      color: $font-color;
+      span {
+        font-style: italic;
+      }
+      a {
+        display: inline;
+      }
+    }
+  }
 }
 
 xmp {
-  @include inset($body-color);
+  @include inset-area($default-color);
   border-radius: $radius;
-  color: darken($body-color, 40);
+  color: darken($default-color, 50);
   margin: 0;
+  margin-bottom: $font-size *3;
   padding: 0 $font-size *2 $font-size *2;
 }
 

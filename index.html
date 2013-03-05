@@ -16,12 +16,34 @@
 </head>
 
 <body>
+
+  <header>
+  <div class="logo">Spare Parts</div>
+
+  <nav>
+    <ul>
+      <li><a href="">One</a></li>
+      <li><a href="">Two</a></li>
+      <li><a href="">Three</a></li>
+    </ul>
+  </nav>
+  <a href=""><div class="header-controls">
+    Settings
+  </div></a>
+  </header>
+
+
+
+
+
 <div class="container">
 <aside class="nav">
   <ul>
     <li><h4>Sass &amp; Mixins</h4></li>
     <li><a href="#variables">Variables</a></li>
-    <li><a href="#inset">Inset</a></li>
+    <li><a href="#inset-area">Inset Area</a></li>
+    <li><a href="#inset-text">Inset Text</a></li>
+
     <li><h4>HTML, SCSS</h4></li>
     <li><a href="#dropdown-menu">Dropdown menu</a></li>
     <li><a href="#button">Button</a>
@@ -54,12 +76,6 @@
 
 <section>
 
-<select name="hej" id="">hej</select>
-<input type="text">
-<input type="radio">hej
-<input type="checkbox">hej
-
-
 
 
 
@@ -88,11 +104,21 @@ $important-color: red;
 </article>
 
 <article>
-<h3 id="inset">Inset</h3>
+<h3 id="inset-area">Inset Area</h3>
 <xmp>
-@mixin inset($body-color) {
+@mixin inset-area($body-color) {
   box-shadow: inset 0 1px 2px darken($body-color, 10), 0 1px 1px lighten($body-color, 10);
   background-color: darken($body-color, 3);
+}
+</xmp>
+</article>
+
+<article>
+<h3 id="inset-text">Inset Text</h3>
+<xmp>
+@mixin inset-text($default-color) {
+  color: darken($default-color, 40);
+  text-shadow: 0 1px 1px lighten($default-color, 30);
 }
 </xmp>
 </article>
@@ -233,6 +259,7 @@ $important-color: red;
 
 <article>
 <h3 id="avatar-and-comment">Avatar & Comment</h3>
+
 <xmp>
 <div class="comment">
   <div class="avatar"></div>
@@ -394,16 +421,22 @@ $(document).ready(function() {
 </xmp>
 
 
-<p>In a class called "nav" where the links are:</p>
+<p>In a class (e.g. situated at the top of a page) called "nav" where the clickable links are:</p>
 <xmp>
 <a href="#anchorname">Link to anchor</a>
 </xmp>
 
+<p>Add the following id to where that link will land:</p>
+<xmp>
+<h1 id="anchorname">This is where you land</h1>
+</xmp>
+
 <p>Include the following files in project directory:</p>
 <ul>
-  <li>jquery-1.8.1.min.js <span>Download lates version at. Not needed for Rails projects</span></li>
-  <li>jquery.localscroll.js <span>Download <a href="http://flesler.blogspot.com/2007/10/jqueryscrollto.html">here</a></span></li>
-  <li>jquery.scrollTo.js</li>
+  <li><span>jquery-1.8.1.min.js</span> Download latest jQuery version <a href="http://blog.jquery.com/">here</a> (Not needed for Rails projects)</li>
+  <li><span>jquery.localscroll.js</span> Download <a href="http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html">here</a></li>
+  <li><span>jquery.scrollTo.js</span> Download <a href="http://flesler.blogspot.com/2007/10/jqueryscrollto.html">here</a></li>
+  <li>You might need to rename the files to fit the names in head.</li>
 </ul>
 
 </article>
