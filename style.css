@@ -11,20 +11,28 @@ body {
 }
 
 /* line 22, style.scss */
+p {
+  font-size: 12px;
+  color: #616161;
+}
+
+/* line 27, style.scss */
 h3 {
   color: #616161;
 }
 
-/* line 26, style.scss */
+/* line 31, style.scss */
 h4 {
   margin: 0;
   color: #616161;
+  border-bottom: 1px solid #c7c7c7;
   text-transform: uppercase;
   font-size: 12px;
   padding: 12px 0 6px 0;
+  margin-bottom: 12px;
 }
 
-/* line 34, style.scss */
+/* line 41, style.scss */
 a {
   display: block;
   font-size: 12px;
@@ -33,42 +41,42 @@ a {
   line-height: 19.2px;
 }
 
-/* line 42, style.scss */
+/* line 49, style.scss */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto;
 }
 
-/* line 47, style.scss */
+/* line 54, style.scss */
 aside {
   width: 20%;
   float: left;
   position: relative;
   height: 100%;
 }
-/* line 53, style.scss */
+/* line 60, style.scss */
 aside ul {
   position: fixed;
   padding: 0;
 }
-/* line 57, style.scss */
+/* line 64, style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 61, style.scss */
+/* line 68, style.scss */
 aside .todo {
   position: fixed;
   top: 900px;
   font-size: 12px;
   color: #616161;
 }
-/* line 66, style.scss */
+/* line 73, style.scss */
 aside .todo p {
   margin: 0;
   padding: 0;
 }
 
-/* line 73, style.scss */
+/* line 80, style.scss */
 section {
   width: 80%;
   float: right;
@@ -76,18 +84,49 @@ section {
   padding: 0;
 }
 
-/* line 80, style.scss */
-pre {
+/* line 87, style.scss */
+xmp {
   box-shadow: inset 0 1px 2px #e0e0e0, 0 1px 1px white;
   background-color: #f2f2f2;
   border-radius: 3px;
   color: #949494;
   margin: 0;
-  padding: 0 24px;
+  padding: 0 24px 24px;
 }
 
-/* line 88, style.scss */
-xmp {
-  margin: 0;
-  padding: 0;
+/* line 114, style.scss */
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: inline-block;
+  padding: 8px 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 19.2px;
+  color: black;
+  vertical-align: middle;
+}
+
+/* line 125, style.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 4px 0;
+  *margin-top: 0;
+  /* IE7 */
+  margin-top: 1px \9;
+  /* IE8-9 */
+  line-height: normal;
 }
