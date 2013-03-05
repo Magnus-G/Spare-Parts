@@ -58,6 +58,16 @@ aside {
       list-style: none;
     }
   }
+  .todo {
+    position: fixed;
+    top: 900px;
+    font-size: $font-size;
+    color: $font-color;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 section {
