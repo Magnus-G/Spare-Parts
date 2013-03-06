@@ -100,70 +100,75 @@ a {
   color: #ffff66;
   text-decoration: none;
   line-height: 20.8px;
+  text-shadow: 0 1px 1px #333300;
+}
+/* line 126, style.scss */
+a:hover {
+  color: white;
 }
 
-/* line 127, style.scss */
+/* line 131, style.scss */
 .container {
   max-width: 1200px;
   margin: auto;
 }
 
-/* line 132, style.scss */
+/* line 136, style.scss */
 aside {
   width: 20%;
   float: left;
   position: relative;
   height: 100%;
 }
-/* line 138, style.scss */
+/* line 142, style.scss */
 aside ul {
   position: fixed;
   padding: 0;
 }
-/* line 142, style.scss */
+/* line 146, style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 146, style.scss */
+/* line 150, style.scss */
 aside .todo {
   position: fixed;
   top: 900px;
   font-size: 13px;
   color: black;
 }
-/* line 151, style.scss */
+/* line 155, style.scss */
 aside .todo p {
   margin: 0;
   padding: 0;
 }
 
-/* line 158, style.scss */
+/* line 162, style.scss */
 section {
   width: 80%;
   float: right;
   margin: 0;
   padding: 0;
 }
-/* line 163, style.scss */
+/* line 167, style.scss */
 section ul {
   padding: 0 0 0 26px;
 }
-/* line 165, style.scss */
+/* line 169, style.scss */
 section ul li {
   font-size: 13px;
   margin-bottom: 6.5px;
   color: black;
 }
-/* line 169, style.scss */
+/* line 173, style.scss */
 section ul li span {
   font-style: italic;
 }
-/* line 172, style.scss */
+/* line 176, style.scss */
 section ul li a {
   display: inline;
 }
 
-/* line 179, style.scss */
+/* line 183, style.scss */
 xmp {
   box-shadow: inset 0 1px 2px #676767, 0 1px 1px #9a9a9a;
   background-color: #787878;
@@ -175,7 +180,7 @@ xmp {
   padding: 0 26px 26px;
 }
 
-/* line 234, style.scss */
+/* line 238, style.scss */
 select,
 textarea,
 input[type="text"],
@@ -201,7 +206,7 @@ input[type="color"] {
   vertical-align: middle;
 }
 
-/* line 245, style.scss */
+/* line 249, style.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 4px 0;
