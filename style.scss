@@ -8,7 +8,7 @@ $dark-color: darken($default-color, 20);
 $black-color: black;
 $white-color: white;
 
-$contrast-color: saturate(lighten(teal, 20), 40);
+$contrast-color: saturate(lighten(yellow, 20), 40);
 $warning-color: yellow;
 $important-color: red;
 $information-color: desaturate(blue, 50);
@@ -66,20 +66,19 @@ header {
       display: inline;
       line-height: 60px;
       padding: 0 40px;
-      border-right: 1px solid gray;
+      border-right: 1px solid darken($dark-color, 10);
       }
     }
 
     li:first-child a {
-      border-left: 1px solid gray;
+      border-left: 1px solid darken($dark-color, 10);
       }
     }
   }
 
   .header-controls {
     float: right;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border-left: 1px solid darken($dark-color, 10);
     line-height: 60px;
     padding: 0 40px;
   }
@@ -118,7 +117,7 @@ h4 {
 }
 
 a {
-  display: block;
+  // display: block;
   font-size: $font-size;
   color: $contrast-color;
   text-decoration: none;

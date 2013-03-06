@@ -43,6 +43,7 @@
     <li><a href="#shadow">Shadow</a></li>
 
     <li><h4>HTML, SCSS</h4></li>
+    <li><a href="#favicon">Favicon</a>
     <li><a href="#dropdown-menu">Dropdown menu</a></li>
     <li><a href="#button">Button</a>
     <li><a href="#badge">Badge</a>
@@ -151,6 +152,22 @@ $information-color: desaturate(blue, 50);
 <h2>HTML &amp; SCSS</h2>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="favicon">Favicon</h3>
+<p>Use <a href="http://iconverticons.com/online/">something like this</a> to create a file in the right size, or rescale it with Fireworks. Rename it to "favicon.ico". Enter this in head:</p>
+<xmp>
+<link rel="shortcut icon" href="favicon.ico" />
+</xmp>
+<p>For Rails projects, place .ico file in "Public" and use this instead for head:</p>
+<xmp>
+<%= favicon_link_tag %>
+</xmp>
+
+
+</article>
+
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
@@ -399,7 +416,8 @@ header {
 header {
   width: 100%;
   height: 60px;
-  background-color: black;
+  background-color: $dark-color;
+  @include shadow($dark-color);
   color: white;
   overflow: auto;
   padding: 0 10px;
@@ -429,20 +447,19 @@ header {
       display: inline;
       line-height: 60px;
       padding: 0 40px;
-      border-right: 1px solid gray;
+      border-right: 1px solid darken($dark-color, 10);
       }
     }
 
     li:first-child a {
-      border-left: 1px solid gray;
+      border-left: 1px solid darken($dark-color, 10);
       }
     }
   }
 
   .header-controls {
     float: right;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border-left: 1px solid darken($dark-color, 10);
     line-height: 60px;
     padding: 0 40px;
   }
