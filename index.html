@@ -33,9 +33,6 @@
   </header>
 
 
-
-
-
 <div class="container">
 <aside class="nav">
   <ul>
@@ -43,14 +40,17 @@
     <li><a href="#variables">Variables</a></li>
     <li><a href="#inset-area">Inset Area</a></li>
     <li><a href="#inset-text">Inset Text</a></li>
+    <li><a href="#shadow">Shadow</a></li>
 
     <li><h4>HTML, SCSS</h4></li>
     <li><a href="#dropdown-menu">Dropdown menu</a></li>
     <li><a href="#button">Button</a>
+    <li><a href="#badge">Badge</a>
     <li><a href="#button-group">Button Group</a>
     <li><a href="#avatar-and-comment">Avatar & Comment</a>
     <li><a href="#baseline-different-text-sizes">Baseline different text sizes</a>
     <li><a href="#fixed-header">Fixed Header</a>
+    <li><a href="#header-with-nav">Header with navigation</a>
     <li><a href="#sticky-footer">Sticky Footer</a>
     <li><a href="#table">Table</a>
     <li><h4>Java Script</h4></li>
@@ -65,8 +65,6 @@
     <p>tabs</p>
     <p>Cards</p>
     <p>Animations, shake</p>
-    <p>Shadow mixin</p>
-    <p>Header with logo, nav, link etc</p>
   </div>
 </aside>
 
@@ -82,6 +80,7 @@
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<div class="sass-and-mixins">
 <h2>Sass &amp; Mixins</h2>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
@@ -90,18 +89,24 @@
 <article>
 <h3 id="variables">Variables</h3>
 <xmp>
-$base: 10px;
-$radius: 5px;
+$radius: 3px;
+$font-size: 13px;
 
 $default-color: gray;
+$font-color: darken($default-color, 60);
 $light-color: lighten($default-color, 20);
 $dark-color: darken($default-color, 20);
 $black-color: black;
 $white-color: white;
+
+$contrast-color: saturate(lighten(teal, 20), 40);
 $warning-color: yellow;
 $important-color: red;
+$information-color: desaturate(blue, 50);
 </xmp>
 </article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
 <h3 id="inset-area">Inset Area</h3>
@@ -109,9 +114,12 @@ $important-color: red;
 @mixin inset-area($body-color) {
   box-shadow: inset 0 1px 2px darken($body-color, 10), 0 1px 1px lighten($body-color, 10);
   background-color: darken($body-color, 3);
+  border: 1px solid darken($default-color, 6);
 }
 </xmp>
 </article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
 <h3 id="inset-text">Inset Text</h3>
@@ -123,6 +131,26 @@ $important-color: red;
 </xmp>
 </article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="shadow">Shadow</h3>
+<xmp>
+@mixin shadow($shadow-color) {
+  box-shadow: 0 1px 3px $shadow-color;
+}
+</xmp>
+</article>
+
+</div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="html-and-scss">
+<h2>HTML &amp; SCSS</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
@@ -177,12 +205,6 @@ $important-color: red;
 </article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>HTML &amp; SCSS</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
 <h3 id="button">Button</h3>
@@ -221,6 +243,39 @@ $important-color: red;
        inset 0 -1px 0 darken($highlight, 30); // bottom
    }
  }
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="badge">Badge</h3>
+<xmp>
+
+<a class="badge">Badge</a>
+
+
+.badge {
+  display: inline-block;
+  padding: $font-size /5 $font-size;
+  font-size: $font-size /1.2;
+  font-weight: bold;
+  line-height: 14px;
+  color: $white-color;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 darken($information-color, 20);
+  background-color: $information-color;
+  border-radius: 9px;
+
+  &:hover {
+    background-color: lighten($information-color, 10);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+
 </xmp>
 </article>
 
@@ -319,8 +374,82 @@ header {
  color: white;
  position: fixed;
 }
-            </xmp>
-        </article>
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="header-with-nav">Header with Navigation</h3>
+<xmp>
+
+<header>
+<div class="logo">Spare Parts</div>
+<nav>
+  <ul>
+    <li><a href="">One</a></li>
+    <li><a href="">Two</a></li>
+    <li><a href="">Three</a></li>
+  </ul>
+</nav>
+<a href=""><div class="header-controls">Controls</div></a>
+</header>
+
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  overflow: auto;
+  padding: 0 10px;
+
+  .logo {
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+    margin-right: 20px;
+  }
+
+  nav {
+    float: left;
+
+  a {
+    float: left;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+
+    a {
+      display: inline;
+      line-height: 60px;
+      padding: 0 40px;
+      border-right: 1px solid gray;
+      }
+    }
+
+    li:first-child a {
+      border-left: 1px solid gray;
+      }
+    }
+  }
+
+  .header-controls {
+    float: right;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    line-height: 60px;
+    padding: 0 40px;
+  }
+}
+
+</xmp>
+</article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
@@ -398,9 +527,12 @@ table tr:nth-child(even) {
 </xmp>
 </article>
 
+</div>
+
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<div class="javascript">
 <h2>Java Script</h2>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
@@ -441,9 +573,12 @@ $(document).ready(function() {
 
 </article>
 
+</div>
+
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<div class="responsive">
 <h2>Responsive</h2>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
@@ -461,6 +596,8 @@ $(document).ready(function() {
 }
 </xmp>
 </article>
+
+</div>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
