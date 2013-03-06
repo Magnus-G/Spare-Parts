@@ -7,180 +7,181 @@ html {
 header {
   width: 100%;
   height: 60px;
-  background-color: #4d4d4d;
-  box-shadow: 0 1px 3px #4d4d4d;
-  color: white;
+  background-color: #8d8d8d;
+  box-shadow: 0 1px 3px #8d8d8d;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bolder;
   overflow: auto;
   padding: 0 10px;
 }
-/* line 44, style.scss */
+/* line 46, style.scss */
 header .logo {
   float: left;
   font-size: 20px;
   line-height: 60px;
   margin-right: 20px;
 }
-/* line 51, style.scss */
+/* line 53, style.scss */
 header nav {
   float: left;
 }
-/* line 54, style.scss */
+/* line 56, style.scss */
 header nav a {
   float: left;
 }
-/* line 58, style.scss */
+/* line 60, style.scss */
 header nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 62, style.scss */
+/* line 64, style.scss */
 header nav ul li {
   display: inline;
 }
-/* line 65, style.scss */
+/* line 67, style.scss */
 header nav ul li a {
   display: inline;
   line-height: 60px;
   padding: 0 40px;
-  border-right: 1px solid #343434;
+  border-right: 1px solid #747474;
 }
-/* line 73, style.scss */
+/* line 75, style.scss */
 header nav ul li:first-child a {
-  border-left: 1px solid #343434;
+  border-left: 1px solid #747474;
 }
-/* line 79, style.scss */
+/* line 81, style.scss */
 header .header-controls {
   float: right;
-  border-left: 1px solid #343434;
+  border-left: 1px solid #747474;
   line-height: 60px;
   padding: 0 40px;
 }
 
-/* line 87, style.scss */
+/* line 89, style.scss */
 body {
-  background-color: gray;
+  background-color: silver;
   font-family: helvetica;
   height: 100%;
   margin: 0;
 }
 
-/* line 94, style.scss */
+/* line 96, style.scss */
 p {
   font-size: 13px;
-  color: black;
+  color: #272727;
 }
 
-/* line 99, style.scss */
+/* line 101, style.scss */
 h2 {
-  color: black;
+  color: #272727;
   line-height: 39px;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #8d8d8d;
 }
 
-/* line 105, style.scss */
+/* line 107, style.scss */
 h3 {
-  color: #1a1a1a;
-  text-shadow: 0 1px 1px #b3b3b3;
+  color: #5a5a5a;
+  text-shadow: 0 1px 1px #f3f3f3;
 }
 
-/* line 109, style.scss */
+/* line 111, style.scss */
 h4 {
   margin: 0;
-  color: black;
-  border-bottom: 1px solid #666666;
+  color: #272727;
+  border-bottom: 1px solid #8d8d8d;
   text-transform: uppercase;
   font-size: 13px;
   padding: 13px 0 6.5px 0;
   margin-bottom: 13px;
 }
 
-/* line 119, style.scss */
+/* line 121, style.scss */
 a {
   font-size: 13px;
-  color: #ffff66;
+  color: #3333ff;
   text-decoration: none;
   line-height: 20.8px;
-  text-shadow: 0 1px 1px #333300;
 }
-/* line 126, style.scss */
+/* line 128, style.scss */
 a:hover {
-  color: white;
+  color: #ccccff;
 }
 
-/* line 131, style.scss */
+/* line 133, style.scss */
 .container {
   max-width: 1200px;
   margin: auto;
 }
 
-/* line 136, style.scss */
+/* line 138, style.scss */
 aside {
   width: 20%;
   float: left;
   position: relative;
   height: 100%;
 }
-/* line 142, style.scss */
+/* line 144, style.scss */
 aside ul {
   position: fixed;
   padding: 0;
 }
-/* line 146, style.scss */
+/* line 148, style.scss */
 aside ul li {
   list-style: none;
 }
-/* line 150, style.scss */
+/* line 152, style.scss */
 aside .todo {
   position: fixed;
   top: 900px;
   font-size: 13px;
-  color: black;
+  color: #272727;
 }
-/* line 155, style.scss */
+/* line 157, style.scss */
 aside .todo p {
   margin: 0;
   padding: 0;
 }
 
-/* line 162, style.scss */
+/* line 164, style.scss */
 section {
   width: 80%;
   float: right;
   margin: 0;
   padding: 0;
 }
-/* line 167, style.scss */
+/* line 169, style.scss */
 section ul {
   padding: 0 0 0 26px;
 }
-/* line 169, style.scss */
+/* line 171, style.scss */
 section ul li {
   font-size: 13px;
   margin-bottom: 6.5px;
-  color: black;
+  color: #272727;
 }
-/* line 173, style.scss */
+/* line 175, style.scss */
 section ul li span {
   font-style: italic;
 }
-/* line 176, style.scss */
+/* line 178, style.scss */
 section ul li a {
   display: inline;
 }
 
-/* line 183, style.scss */
+/* line 185, style.scss */
 xmp {
-  box-shadow: inset 0 1px 2px #676767, 0 1px 1px #9a9a9a;
-  background-color: #787878;
-  border: 1px solid #717171;
+  box-shadow: inset 0 1px 2px #a7a7a7, 0 1px 1px #dadada;
+  background-color: #b8b8b8;
+  border: 1px solid #b1b1b1;
   border-radius: 3px;
-  color: black;
+  color: #414141;
   margin: 0;
   margin-bottom: 39px;
   padding: 0 26px 26px;
 }
 
-/* line 238, style.scss */
+/* line 240, style.scss */
 select,
 textarea,
 input[type="text"],
@@ -206,7 +207,7 @@ input[type="color"] {
   vertical-align: middle;
 }
 
-/* line 249, style.scss */
+/* line 251, style.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 4px 0;

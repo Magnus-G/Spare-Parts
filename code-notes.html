@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Notes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+  <script src="jquery.localscroll.js" type="text/javascript"></script>
+  <script src="jquery.scrollTo.js" type="text/javascript"></script>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <script type="text/javascript">
+  $(document).ready(function() {
+     $('.nav').localScroll({duration:800});
+  });
+  </script>
+</head>
+
+<body>
+
+  <header>
+  <div class="logo">Fragments</div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Spare Parts</a></li>
+      <li><a href="code-notes.html">Code Notes</a></li>
+    </ul>
+  </nav>
+  <a href=""><div class="header-controls">
+    Settings
+  </div></a>
+  </header>
+
+
+<div class="container">
+<aside class="nav">
+  <ul>
+    <li><h4>Rails</h4></li>
+    <li><a href="#create-a-rails-project">Create a Rails project</a></li>
+    <li><a href="#generate-controller">Generate a controller and action</a></li>
+    <li><a href="#change-layout-for-controller">Change layout for entire Controller</a></li>
+    <li><a href="#push-to-staging">Push to Staging</a></li>
+  </ul>
+
+</aside>
+
+
+
+
+
+<section>
+
+
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="rails">
+<h2>Rails</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="create-a-rails-project">Creating a Rails project</h3>
+<p>With the command line, navigate to where you want the project folder to be generated (e.g. documents/my_rails_projects/) and type the following to create a project called project_name:</p>
+<xmp>
+rails new project_name
+</xmp>
+<p>Navigate to that folder and type the following to create a controller called posts:</p>
+<xmp>
+rails g controller posts
+</xmp>
+<p>In text editor, open the file project_name/app/controllers/posts_controller and make sure it says:</p>
+<xmp>
+class PostsController < ApplicationController
+def index
+end
+end
+</xmp>
+<p>Navigate to project_name/app/views/posts/ and create the file index.html.erb in that folder. Open project_name/config/routes.rb and under the first row, enter:</p>
+<xmp>
+resources :posts
+</xmp>
+<p>With the command line tool, make sure you are have navigated to the project folder, then type:</p>
+<xmp>
+rails s
+</xmp>
+<p>In your browser, go to localhost:3000/posts. To stop the server, hit ctrl-C.</p>
+</article>
+
+<article>
+<h3 id="generate-controller">Generate a controller and action</h3>
+<xmp>
+rails g controller <controller name> <action>
+</xmp>
+</article>
+
+<article>
+<h3 id="change-layout-for-controller">Change layout for entire Controller</h3>
+<xmp>
+class ProductsController < ApplicationController
+layout "inventory"
+end
+</xmp>
+<p>In the 'layouts' folder under 'views' you can save different layout styles. In the controller you specify which layout will be used.</p>
+</article>
+
+<article>
+<h3 id="push-to-staging">Push to staging</h3>
+<xmp>
+git remote show
+</xmp>
+<p>Result should say "origin" as well as "staging". If not "staging" then type:</p>
+<xmp>
+git remote add staging git@heroku.com:projectname-staging.git
+</xmp>
+<p>Try git remote show again. Then push master to staging:</p>
+<xmp>
+git push staging master
+</xmp>
+</article>
+
+<xmp>
+Rails Issues
+If "undefined method `body' for..."
+
+rake db:migrate
+If "database ... does not exist":
+
+rake db:create db:migrate
+If server doesn't start: Migrate the database
+
+bundle exec rake db:migrate
+This needs to be written into the command line if development has been been working on the database and the server doesn't start.
+
+can't convert Symbol into Integer
+
+restart server
+
+psych errors. warning: already initialized constant ANY
+
+bundle exec rails s
+or
+
+gem uninstall psych
+[BUG] Segmentation fault
+
+uninstall sqlite3 and reinstall.
+
+gem uninstall sqlite3
+gem install sqlite3
+bundle install
+Use ruby 1.9.3
+
+rvm use ruby-1.9.3-p194
+Installations
+Installing bourbon
+
+http://bourbon.io/ Add the following line in your Gemfile:
+
+gem 'bourbon'
+In the command line, enter:
+
+bundle install
+Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss:
+
+in application.css.scss, delete the folliwing line:
+
+*= require_tree .
+Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:
+
+@import "bourbon";
+(any other imports below)
+Installing Neat
+
+http://neat.bourbon.io/ First: Install Bourbon. Add the following line in your Gemfile:
+
+gem 'neat'
+In the command line, enter:
+
+bundle install
+If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:
+
+bundle update sass
+Within your application.css.scss file place the following on top:
+
+@import "bourbon";
+@import "neat";
+Installing Bootstrap
+
+Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:
+
+@import "bootstrap.css.scss";
+HTML.ERB
+Create a text link
+
+http://guides.rubyonrails.org/routing.html
+
+<%= link_to 's', terms_path %>
+"Terms" is the text shown for the link. The path needs to exist in config/routes.rb e.g.
+
+get 'terms', to: 'welcome#terms'
+for the link to the page "terms" under the folder "welcome". Restart server after updating the rb file.
+
+Image as link, declared in the HTML
+
+<%= link_to root_path, :id => "root" do %>
+<img />
+<% end %>
+Image as link, declared in the SCSS
+
+<%= link_to('', root_path, class: 'my_image') %>
+In the SCSS, use the "my_image" class to add background-image, or other styling. The '' makes sure no text is used for the link.
+
+External link
+
+<%= link_to("http://www.dn.se") do %>
+<img />
+<% end %>
+Internal link as button
+
+<%= button_to "This is a link button", root_path, :method => "get", class: 'btn' %>
+Internal link as a button (specific, generated page)
+
+To link to a page that is created, that is specific, go to controllers and the correct controller file (e.g. if the page is a "race" then go to the "races_controller"). Find the
+
+def <name of the html you are working in>
+and copy the @race (or whatever has an @ in front of it). Then use this link code:
+
+<%= button_to "Back", race_path(@race), :method => "get", class: 'btn' %>
+Repeat elements
+
+<% 3.times do %>
+<li></li>
+<% end %>
+Render a partial
+
+<%= render 'folder/sidebar' %>
+When saving partials, make sure their names start with an underscore and have the file type _PARTIAL.html.erb. They should not be called with an underscore though.
+
+<%= render purchaseable.events, section: purchaseable %>
+This renders an array of events from the 'events' folder
+
+Area that appears on many pages
+
+In the layout/application.html.erb
+
+<%= yield :top_container %>
+On the specific page
+
+<% content_for :top_container do %>
+...content...
+<% end %>
+Insert an image with a class
+
+<%= image_tag('divider_arrow.png', :class => "arrow") %>
+Insert an image using the asset pipeline
+
+<%= image_tag("foo.png") %>
+Linking Javascript assets
+
+<%= javascript_include_tag "main", "columns" %>
+Linking Stylesheet assets
+
+<%= stylesheet_link_tag "main", "columns" %>
+SCSS
+CSS Image Assets
+
+background: image_url("image.png");
+Align fonts of different sizes to same baseline
+
+Use spans to let text resize from the same baseline.
+
+<div style="height:100px; line-height:100px; background:#EEE;">
+<span style="vertical-align:middle;">test</span>
+<span style="font-size:2em; vertical-align:middle;">test</span>
+</div>
+Can't find an id or class in ruby?
+
+Looking for flash_success could be in the format:
+
+flash[:success]
+Fonts
+Fontello
+
+http://fontello.com/
+
+Select files, download them and place the font files in assets/fonts. In the HTML, declare the icon:
+
+<i class="icon-export"></i>
+In the SCSS, make sure all the file types are called for:
+
+@font-face {
+font-family: 'fontello';
+src: url('fontello.eot');
+src:url('fontello.eot?#iefix') format('embedded-opentype'),
+url('fontello.svg#icomoon') format('svg'),
+url('fontello.woff') format('woff'),
+url('fontello.ttf') format('truetype');
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+font-family: 'fontello';
+font-style: normal;
+font-weight: normal;
+speak: none;
+display: inline-block;
+}
+
+.icon-export:before { content: '\e715'; } /* '' */
+Forms
+Formtastic
+
+http://rdoc.info/github/justinfrench/formtastic
+
+Changing a label for an input
+
+<%= f.input :defaultname, label: 'Not the default name' %>
+If 'label:' is not used the label will read whatever the default name is.
+
+Number of rows for text area
+
+<%= f.input :textareaname, input_html: {rows: 10} %>
+input_html: can be used for other things such as disabling text fields.
+
+Simpleform
+
+https://github.com/plataformatec/simple_form
+
+Add class to an input
+
+<%= f.button :submit, :class => "btn" %>
+Textarea
+
+<%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
+</xmp>
+
+
+</body>
+
+</html>

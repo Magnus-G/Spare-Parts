@@ -1,14 +1,14 @@
 $radius: 3px;
 $font-size: 13px;
 
-$default-color: gray;
+$default-color: silver;
 $font-color: darken($default-color, 60);
 $light-color: lighten($default-color, 20);
 $dark-color: darken($default-color, 20);
 $black-color: black;
 $white-color: white;
 
-$contrast-color: saturate(lighten(yellow, 20), 40);
+$contrast-color: saturate(lighten(blue, 10), 40);
 $warning-color: yellow;
 $important-color: red;
 $information-color: desaturate(blue, 50);
@@ -37,7 +37,9 @@ header {
   height: 60px;
   background-color: $dark-color;
   @include shadow($dark-color);
-  color: white;
+  color: $black-color;
+  text-transform: uppercase;
+  font-weight: bolder;
   overflow: auto;
   padding: 0 10px;
 
@@ -121,7 +123,7 @@ a {
   color: $contrast-color;
   text-decoration: none;
   line-height: $font-size *1.6;
-  text-shadow: 0 1px 1px darken($contrast-color, 60);
+  // text-shadow: 0 1px 1px darken($contrast-color, 60);
 
   &:hover {
     color: lighten($contrast-color, 30);
