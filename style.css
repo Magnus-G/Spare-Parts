@@ -99,13 +99,13 @@ h4 {
 /* line 121, style.scss */
 a {
   font-size: 13px;
-  color: #3333ff;
+  color: white;
   text-decoration: none;
   line-height: 20.8px;
 }
 /* line 128, style.scss */
 a:hover {
-  color: #ccccff;
+  color: white;
 }
 
 /* line 133, style.scss */
