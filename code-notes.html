@@ -17,43 +17,78 @@
 
 <body>
 
-  <header>
-  <div class="logo">Fragments</div>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Spare Parts</a></li>
-      <li><a href="code-notes.html">Code Notes</a></li>
-    </ul>
-  </nav>
-  <a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/code-notes.html"><div class="header-controls">
-    Edit
-  </div></a>
-  </header>
-
+<a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/code-notes.html"><div class="edit">
+  Edit
+</div></a>
 
 <div class="container">
 <aside class="nav">
   <ul>
+    <div class="main"><a href="index.html">Spare Parts</a></div>
+    <div class="main"><a href="code-notes.html">Code Notes</a></div>
+
     <li><h4>Rails</h4></li>
     <li><a href="#create-a-rails-project">Create a Rails project</a></li>
     <li><a href="#generate-controller">Generate a controller and action</a></li>
     <li><a href="#change-layout-for-controller">Change layout for entire Controller</a></li>
     <li><a href="#push-to-staging">Push to Staging</a></li>
+
     <li><h4>Git</h4></li>
     <li><a href="#undo-a-certain-file">Undo a certain file</a></li>
+
+    <li><h4>Wordpress</h4></li>
+    <li><a href="#bitnami">Bitnami</a></li>
+    <li><a href="#wp-local">Wordpress locally</a></li>
+    <li><a href="#create-child-theme">Create Child Theme</a></li>
+    <li><a href="#gh-pages">gh-pages</a></li>
+
+    <li><h4>Rails issues</h4></li>
+    <li><a href="#undefined-method">Undefined method</a></li>
+    <li><a href="#database-does-not-exist">Database does not exist</a></li>
+    <li><a href="#server-doesnt-start">Server doesn't start</a></li>
+    <li><a href="#cant-convert-symbol-to-integer">Can't convert symbol to integer</a></li>
+    <li><a href="#segmentation-fault">[BUG] Segmentation fault</a></li>
+    <li><a href="#psych-error">Psych error</a></li>
+
+    <li><h4>Installations</h4></li>
+    <li><a href="#installing-bourbon">Installing bourbon</a></li>
+    <li><a href="#installing-neat">Installing neat</a></li>
+    <li><a href="#installing-bootstrap">Installing Bootstrap</a></li>
+
+    <li><h4>HTML.erb</h4></li>
+    <li><a href="#create-a-text-link">Create a text link</a></li>
+    <li><a href="#image-as-link-declared-in-html">Image as link, declared in the HTML</a></li>
+    <li><a href="#image-as-a-link-delcared-in-scss">Image as link, declared in the SCSS</a></li>
+    <li><a href="#external-link">External link</a></li>
+    <li><a href="#internal-link-as-button">Internal link as button</a></li>
+    <li><a href="#internal-link-generated-page">Internal link as a button (specific, generated page)</a></li>
+    <li><a href="#repeat-elements">Repeat elements</a></li>
+    <li><a href="#render-a-partial">Render a partial</a></li>
+    <li><a href="#area-that-appears-on-many-pages">Area that appears on many pages</a></li>
+    <li><a href="#insert-image-with-class">Insert an image with a class</a></li>
+    <li><a href="#insert-image-with-asset-pipeline">Insert an image using the asset pipeline</a></li>
+    <li><a href="#linking-javascript-assets">Linking Javascript assets</a></li>
+    <li><a href="#linking-stylesheet-assets">Linking Stylesheet assets</a></li>
+
+    <li><h4>SCSS</h4></li>
+    <li><a href="#css-image-assets">CSS Image Assets</a></li>
+    <li><a href="#cant-find-class-in-ruby">Can't find an id or class in ruby?</a></li>
+
+    <li><h4>Fonts</h4></li>
+    <li><a href="#fontello">Fontello</a></li>
+
+    <li><h4>Forms</h4></li>
+    <li><a href="#formtastic">Formtastic</a></li>
+    <li><a href="#simple-form">Simple form</a></li>
   </ul>
 
 </aside>
 
 
-
-
-
 <section>
 
 
-
+<h1>Code Notes</h1>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
@@ -161,7 +196,7 @@ git checkout app/views/filename
 <ul>
   <li>Install bitnami</li>
   <li>Download latest wordpress</li>
-  <li></li>  
+  <li></li>
   <li>Have manager-osx running</li>
   <li></li>
 </ul>
@@ -170,11 +205,10 @@ git checkout app/views/filename
 </xmp>
 </article>
 
-
-
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
-<h3 id="">Wordpress</h3>
+<h3 id="wp-local">Wordpress</h3>
 <p></p>
 <ul>
   <li>Install MAMP</li>
@@ -190,7 +224,7 @@ git checkout app/views/filename
   <li></li>
 </ul>
 <ul>
-  
+
   <li>Work locally: go to localhost:9999/wp-admin to log in</li>
 </ul>
 <xmp>
@@ -198,10 +232,7 @@ git checkout app/views/filename
 </xmp>
 </article>
 
-
-
-
-
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
 <h3 id="create-child-theme">Create Child Theme</h3>
@@ -226,16 +257,18 @@ body {
 }
 </xmp>
 
-
 </article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<h2>GH-pages</h2>
 
-
-
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
-<h3 id="">gh-pages</h3>
+<h3 id="gh-pages">gh-pages</h3>
 <p></p>
 <ul>
   <li></li>
@@ -248,194 +281,338 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<h2>Rails Issues</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="undefined-method">Undefined method</h3>
+<p>If "undefined method `body' for..."</p>
 <xmp>
-Rails Issues
-If "undefined method `body' for..."
-
 rake db:migrate
-If "database ... does not exist":
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="database-does-not-exist">Database does not exist</h3>
+<p>If "database ... does not exist":</p>
+<xmp>
 rake db:create db:migrate
-If server doesn't start: Migrate the database
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="server-doesnt-start">Server doesn't start</h3>
+<xmp>
 bundle exec rake db:migrate
-This needs to be written into the command line if development has been been working on the database and the server doesn't start.
+</xmp>
+</article>
 
-can't convert Symbol into Integer
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-restart server
+<article>
+<h3 id="cant-convert-symbol-to-integer">Can't convert symbol to integer</h3>
+<p>Restart server</p>
+</article>
 
-psych errors. warning: already initialized constant ANY
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-bundle exec rails s
-or
-
-gem uninstall psych
-[BUG] Segmentation fault
-
-uninstall sqlite3 and reinstall.
-
+<article>
+<h3 id="segmentation-fault">[BUG] Segmentation fault</h3>
+<xmp>
 gem uninstall sqlite3
 gem install sqlite3
 bundle install
-Use ruby 1.9.3
-
 rvm use ruby-1.9.3-p194
-Installations
-Installing bourbon
+</xmp>
+</article>
 
-http://bourbon.io/ Add the following line in your Gemfile:
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<article>
+<h3 id="psych-error">Psych error</h3>
+<xmp>
+gem uninstall psych
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>Installations</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="installing-bourbon">Installing bourbon</h3>
+<a href="http://bourbon.io/ ">Bourbon</a>
+<p>Add the following line in your Gemfile:</p>
+<xmp>
 gem 'bourbon'
-In the command line, enter:
-
+</xmp>
+<p>In the command line, enter:</p>
+<xmp>
 bundle install
-Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss:
-
-in application.css.scss, delete the folliwing line:
-
+</xmp>
+<p>Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss</p>
+<p>in application.css.scss, delete the folliwing line:</p>
+<xmp>
 *= require_tree .
-Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:
-
+</xmp>
+<p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+<xmp>
 @import "bourbon";
-(any other imports below)
-Installing Neat
+</xmp>
+</article>
 
-http://neat.bourbon.io/ First: Install Bourbon. Add the following line in your Gemfile:
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<article>
+<h3 id="installing-neat">Installing neat</h3>
+<a href="http://neat.bourbon.io/">Neat</a>
+<p>First: Install Bourbon (see above). Add the following line in your Gemfile:</p>
+<xmp>
 gem 'neat'
-In the command line, enter:
-
+</xmp>
+<p>In the command line, enter:</p>
+<xmp>
 bundle install
-If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:
-
+</xmp>
+<p>If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:</p>
+<xmp>
 bundle update sass
-Within your application.css.scss file place the following on top:
-
+</xmp>
+<p>Within your application.css.scss file place the following on top:</p>
+<xmp>
 @import "bourbon";
 @import "neat";
-Installing Bootstrap
+</xmp>
+</article>
 
-Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<article>
+<h3 id="installing-bootstrap">Installing Bootstrap</h3>
+<a href="http://bootstrap.com">Bootstrap</a>
+<p>Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:</p>
+<xmp>
 @import "bootstrap.css.scss";
-HTML.ERB
-Create a text link
+</xmp>
+</article>
 
-http://guides.rubyonrails.org/routing.html
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<h2>HTML.ERB</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="create-a-text-link">Create a text link</h3>
+<a href="http://guides.rubyonrails.org/routing.html">Routing in Ruby on Rails</a>
+<xmp>
 <%= link_to 's', terms_path %>
-"Terms" is the text shown for the link. The path needs to exist in config/routes.rb e.g.
+</xmp>
+<p>"Terms" is the text shown for the link. The path needs to exist in config/routes.rb e.g.
+get 'terms', to: 'welcome#terms' for the link to the page "terms" under the folder "welcome". Restart server after updating the rb file.</p>
+</article>
 
-get 'terms', to: 'welcome#terms'
-for the link to the page "terms" under the folder "welcome". Restart server after updating the rb file.
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-Image as link, declared in the HTML
 
+<article>
+<h3 id="image-as-link-declared-in-html">Image as link, declared in the HTML</h3>
+<xmp>
 <%= link_to root_path, :id => "root" do %>
 <img />
 <% end %>
-Image as link, declared in the SCSS
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="image-as-a-link-delcared-in-scss">Image as link, declared in the SCSS</h3>
+<xmp>
 <%= link_to('', root_path, class: 'my_image') %>
-In the SCSS, use the "my_image" class to add background-image, or other styling. The '' makes sure no text is used for the link.
+</xmp>
+<p>In the SCSS, use the "my_image" class to add background-image, or other styling. The '' makes sure no text is used for the link.</p>
+</article>
 
-External link
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<article>
+<h3 id="external-link">External link</h3>
+<xmp>
 <%= link_to("http://www.dn.se") do %>
 <img />
 <% end %>
-Internal link as button
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="internal-link-as-button">Internal link as button</h3>
+<xmp>
 <%= button_to "This is a link button", root_path, :method => "get", class: 'btn' %>
-Internal link as a button (specific, generated page)
+</xmp>
+</article>
 
-To link to a page that is created, that is specific, go to controllers and the correct controller file (e.g. if the page is a "race" then go to the "races_controller"). Find the
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<article>
+<h3 id="internal-link-generated-page">Internal link as a button (specific, generated page)</h3>
+
+<p>To link to a page that is created, that is specific, go to controllers and the correct controller file (e.g. if the page is a "race" then go to the "races_controller"). Find the</p>
+<xmp>
 def <name of the html you are working in>
-and copy the @race (or whatever has an @ in front of it). Then use this link code:
+</xmp>
 
+<p>and copy the @race (or whatever has an @ in front of it). Then use this link code:</p>
+
+<xmp>
 <%= button_to "Back", race_path(@race), :method => "get", class: 'btn' %>
-Repeat elements
+</xmp>
 
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="repeat-elements">Repeat elements</h3>
+<xmp>
 <% 3.times do %>
 <li></li>
 <% end %>
-Render a partial
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="render-a-partial">Render a partial</h3>
+<xmp>
 <%= render 'folder/sidebar' %>
-When saving partials, make sure their names start with an underscore and have the file type _PARTIAL.html.erb. They should not be called with an underscore though.
+</xmp>
+<p>When saving partials, make sure their names start with an underscore and have the file type _PARTIAL.html.erb. They should not be called with an underscore though.</p>
+<xmp>
+  <%= render purchaseable.events, section: purchaseable %>
+</xmp>
+<p>This renders an array of events from the 'events' folder</p>
 
-<%= render purchaseable.events, section: purchaseable %>
-This renders an array of events from the 'events' folder
+</article>
 
-Area that appears on many pages
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-In the layout/application.html.erb
-
+<article>
+<h3 id="area-that-appears-on-many-pages">Area that appears on many pages</h3>
+<p>In the layout/application.html.erb</p>
+<xmp>
 <%= yield :top_container %>
-On the specific page
-
+</xmp>
+<p>On the specific page</p>
+<xmp>
 <% content_for :top_container do %>
 ...content...
 <% end %>
-Insert an image with a class
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="insert-image-with-class">Insert an image with a class</h3>
+<xmp>
 <%= image_tag('divider_arrow.png', :class => "arrow") %>
-Insert an image using the asset pipeline
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="insert-image-with-asset-pipeline">Insert an image using the asset pipeline</h3>
+<xmp>
 <%= image_tag("foo.png") %>
-Linking Javascript assets
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<article>
+<h3 id="linking-javascript-assets">Linking Javascript assets</h3>
+<xmp>
 <%= javascript_include_tag "main", "columns" %>
-Linking Stylesheet assets
+</xmp>
+</article>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<article>
+<h3 id="linking-stylesheet-assets">Linking Stylesheet assets</h3>
+<xmp>
 <%= stylesheet_link_tag "main", "columns" %>
-SCSS
-CSS Image Assets
+</xmp>
+</article>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>SCSS</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="css-image-assets">CSS Image Assets</h3>
+<xmp>
 background: image_url("image.png");
-Align fonts of different sizes to same baseline
+</xmp>
+</article>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-Use spans to let text resize from the same baseline.
+<article>
+<h3 id="cant-find-class-in-ruby">Can't find an id or class in ruby?</h3>
 
-<div style="height:100px; line-height:100px; background:#EEE;">
-<span style="vertical-align:middle;">test</span>
-<span style="font-size:2em; vertical-align:middle;">test</span>
-</div>
-Can't find an id or class in ruby?
-
-Looking for flash_success could be in the format:
-
+<p>Looking for flash_success could be in the format:</p>
+<xmp>
 flash[:success]
-Fonts
-Fontello
+</xmp>
+</article>
 
-http://fontello.com/
 
-Select files, download them and place the font files in assets/fonts. In the HTML, declare the icon:
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>Fonts</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<article>
+<h3 id="fontello">Fontello</h3>
+
+<a href="http://fontello.com/">Fontello</a>
+
+<ul>
+  <li>Select files</li>
+  <li>Download them and place the font files in assets/fonts</li>
+  <li>In the HTML, declare the icon:</li>
+</ul>
+<xmp>
 <i class="icon-export"></i>
-In the SCSS, make sure all the file types are called for:
+</xmp>
 
+<p>In the SCSS, make sure all the file types are called for:</p>
+<xmp>
 @font-face {
 font-family: 'fontello';
 src: url('fontello.eot');
@@ -455,40 +632,64 @@ display: inline-block;
 }
 
 .icon-export:before { content: '\e715'; } /* '' */
-Forms
-Formtastic
-
-http://rdoc.info/github/justinfrench/formtastic
-
-Changing a label for an input
-
-<%= f.input :defaultname, label: 'Not the default name' %>
-If 'label:' is not used the label will read whatever the default name is.
-
-Number of rows for text area
-
-<%= f.input :textareaname, input_html: {rows: 10} %>
-input_html: can be used for other things such as disabling text fields.
-
-Simpleform
-
-https://github.com/plataformatec/simple_form
-
-Add generic text field
-
-<article>
-<h3 #="text-field">Generic Textfield</h3>
-<%= text_field :logo, as: :file, label: "Race Logo" %>
+</xmp>
 </article>
 
-Add class to an input
 
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>Forms</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="formtastic">Formtastic</h3>
+
+<a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
+
+<h4>Changing a label for an input</h4>
+<xmp>
+<%= f.input :defaultname, label: 'Not the default name' %>
+If 'label:' is not used the label will read whatever the default name is.
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h4>Number of rows for text area</h4>
+<xmp>
+<%= f.input :textareaname, input_html: {rows: 10} %>
+input_html: can be used for other things such as disabling text fields.
+</xmp>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h3 id="simple-form">Simple form</h3>
+
+<a href="https://github.com/plataformatec/simple_form">Simple form</a>
+
+<h4>Add generic text field</h4>
+
+<%= text_field :logo, as: :file, label: "Race Logo" %>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h4>Add class to an input</h4>
+<xmp>
 <%= f.button :submit, :class => "btn" %>
-Textarea
+</xmp>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h4>Textarea</h4>
+<xmp>
 <%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
 </xmp>
 
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 </body>
 

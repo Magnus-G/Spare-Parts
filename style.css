@@ -1,64 +1,31 @@
-/* line 31, style.scss */
+/* line 32, style.scss */
 html {
   height: 100%;
 }
 
-/* line 35, style.scss */
-header {
-  width: 100%;
-  height: 60px;
+/* line 36, style.scss */
+.main {
   background-color: #8d8d8d;
-  box-shadow: 0 1px 3px #8d8d8d;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bolder;
-  overflow: auto;
-  padding: 0 10px;
-}
-/* line 46, style.scss */
-header .logo {
-  float: left;
-  font-size: 20px;
-  line-height: 60px;
-  margin-right: 20px;
-}
-/* line 53, style.scss */
-header nav {
-  float: left;
-}
-/* line 56, style.scss */
-header nav a {
-  float: left;
-}
-/* line 60, style.scss */
-header nav ul {
-  margin: 0;
-  padding: 0;
-}
-/* line 64, style.scss */
-header nav ul li {
-  display: inline;
-}
-/* line 67, style.scss */
-header nav ul li a {
-  display: inline;
-  line-height: 60px;
-  padding: 0 40px;
-  border-right: 1px solid #747474;
-}
-/* line 75, style.scss */
-header nav ul li:first-child a {
-  border-left: 1px solid #747474;
-}
-/* line 81, style.scss */
-header .header-controls {
-  float: right;
-  border-left: 1px solid #747474;
-  line-height: 60px;
-  padding: 0 40px;
+  display: inline-block;
+  padding: 13px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px black;
 }
 
-/* line 89, style.scss */
+/* line 44, style.scss */
+.edit {
+  background-color: white;
+  color: black;
+  padding: 26px;
+  line-height: 0;
+  position: fixed;
+  right: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin-top: 26px;
+}
+
+/* line 56, style.scss */
 body {
   background-color: silver;
   font-family: helvetica;
@@ -66,26 +33,32 @@ body {
   margin: 0;
 }
 
-/* line 96, style.scss */
+/* line 63, style.scss */
 p {
   font-size: 13px;
   color: #272727;
 }
 
-/* line 101, style.scss */
+/* line 68, style.scss */
+h1 {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+/* line 73, style.scss */
 h2 {
   color: #272727;
   line-height: 39px;
   border-bottom: 1px solid #8d8d8d;
 }
 
-/* line 107, style.scss */
+/* line 79, style.scss */
 h3 {
   color: #5a5a5a;
   text-shadow: 0 1px 1px #f3f3f3;
 }
 
-/* line 111, style.scss */
+/* line 83, style.scss */
 h4 {
   margin: 0;
   color: #272727;
@@ -96,80 +69,88 @@ h4 {
   margin-bottom: 13px;
 }
 
-/* line 121, style.scss */
+/* line 93, style.scss */
 a {
   font-size: 13px;
   color: white;
   text-decoration: none;
   line-height: 20.8px;
 }
-/* line 128, style.scss */
+/* line 100, style.scss */
 a:hover {
   color: white;
 }
 
-/* line 133, style.scss */
+/* line 105, style.scss */
 .container {
   max-width: 1200px;
   margin: auto;
 }
 
-/* line 138, style.scss */
+/* line 110, style.scss */
 aside {
   width: 20%;
   float: left;
   position: relative;
   height: 100%;
 }
-/* line 144, style.scss */
+/* line 116, style.scss */
 aside ul {
   position: fixed;
   padding: 0;
+  margin-top: 26px;
 }
-/* line 148, style.scss */
+/* line 121, style.scss */
 aside ul li {
   list-style: none;
+  line-height: 10px;
 }
-/* line 152, style.scss */
+/* line 125, style.scss */
+aside ul li a {
+  font-size: 8.667px;
+  line-height: 8.667px;
+}
+/* line 131, style.scss */
 aside .todo {
   position: fixed;
   top: 900px;
   font-size: 13px;
   color: #272727;
 }
-/* line 157, style.scss */
+/* line 136, style.scss */
 aside .todo p {
   margin: 0;
   padding: 0;
 }
 
-/* line 164, style.scss */
+/* line 143, style.scss */
 section {
   width: 80%;
   float: right;
   margin: 0;
+  margin-top: 26px;
   padding: 0;
 }
-/* line 169, style.scss */
+/* line 149, style.scss */
 section ul {
   padding: 0 0 0 26px;
 }
-/* line 171, style.scss */
+/* line 151, style.scss */
 section ul li {
   font-size: 13px;
   margin-bottom: 6.5px;
   color: #272727;
 }
-/* line 175, style.scss */
+/* line 155, style.scss */
 section ul li span {
   font-style: italic;
 }
-/* line 178, style.scss */
+/* line 158, style.scss */
 section ul li a {
   display: inline;
 }
 
-/* line 185, style.scss */
+/* line 165, style.scss */
 xmp {
   box-shadow: inset 0 1px 2px #a7a7a7, 0 1px 1px #dadada;
   background-color: #b8b8b8;
@@ -178,10 +159,10 @@ xmp {
   color: #414141;
   margin: 0;
   margin-bottom: 39px;
-  padding: 0 26px 26px;
+  padding: 0 26px 16.9px;
 }
 
-/* line 240, style.scss */
+/* line 220, style.scss */
 select,
 textarea,
 input[type="text"],
@@ -207,7 +188,7 @@ input[type="color"] {
   vertical-align: middle;
 }
 
-/* line 251, style.scss */
+/* line 231, style.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 4px 0;

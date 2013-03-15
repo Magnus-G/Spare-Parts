@@ -17,24 +17,15 @@
 
 <body>
 
-  <header>
-  <div class="logo">Fragments</div>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Spare Parts</a></li>
-      <li><a href="code-notes.html">Code Notes</a></li>
-    </ul>
-  </nav>
-  <a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/index.html"><div class="header-controls">
-    Edit
-  </div></a>
-  </header>
-
+<a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/index.html"><div class="edit">
+  Edit
+</div></a>
 
 <div class="container">
 <aside class="nav">
   <ul>
+    <div class="main"><a href="index.html">Spare Parts</a></div>
+    <div class="main"><a href="code-notes.html">Code Notes</a></div>
     <li><h4>Sass &amp; Mixins</h4></li>
     <li><a href="#variables">Variables</a></li>
     <li><a href="#inset-area">Inset Area</a></li>
@@ -290,7 +281,7 @@ $information-color: desaturate(blue, 50);
   border-bottom-color: darken($dark-color, 10%);
   border-radius: $radius;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  
+
   &:hover {
     color: $dark-color;
     text-decoration: none;

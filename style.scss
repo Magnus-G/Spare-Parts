@@ -1,5 +1,6 @@
 $radius: 3px;
 $font-size: 13px;
+$margin-document: $font-size *2;
 
 $default-color: silver;
 $font-color: darken($default-color, 60);
@@ -25,65 +26,31 @@ $information-color: desaturate(blue, 50);
 }
 
 @mixin shadow($shadow-color) {
-  box-shadow: 0 1px 3px $shadow-color;
+  box-shadow: 0 1px 1px $shadow-color;
 }
 
 html {
   height: 100%;
 }
 
-header {
-  width: 100%;
-  height: 60px;
+.main {
   background-color: $dark-color;
-  @include shadow($dark-color);
-  color: $white-color;
-  text-transform: uppercase;
-  font-weight: bolder;
-  overflow: auto;
-  padding: 0 10px;
+  display: inline-block;
+  padding: $font-size;
+  border-radius: $radius;
+  @include shadow($black-color);
+}
 
-  .logo {
-    float: left;
-    font-size: 20px;
-    line-height: 60px;
-    margin-right: 20px;
-  }
-
-  nav {
-    float: left;
-
-  a {
-    float: left;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline;
-
-    a {
-      display: inline;
-      line-height: 60px;
-      padding: 0 40px;
-      border-right: 1px solid darken($dark-color, 10);
-      }
-    }
-
-    li:first-child a {
-      border-left: 1px solid darken($dark-color, 10);
-      }
-    }
-  }
-
-  .header-controls {
-    float: right;
-    border-left: 1px solid darken($dark-color, 10);
-    line-height: 60px;
-    padding: 0 40px;
-  }
+.edit {
+  background-color: $contrast-color;
+  color: $black-color;
+  padding: $font-size *2;
+  line-height: 0;
+  position: fixed;
+  right: 0;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  margin-top: $margin-document;
 }
 
 body {
@@ -96,6 +63,11 @@ body {
 p {
   font-size: $font-size;
   color: $font-color;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: $font-size;
 }
 
 h2 {
@@ -144,9 +116,16 @@ aside {
   ul {
     position: fixed;
     padding: 0;
+    margin-top: $margin-document;
 
     li {
       list-style: none;
+      line-height: $font-size /1.3;
+
+      a {
+        font-size: $font-size /1.5;
+        line-height: $font-size /1.5;
+      }
     }
   }
   .todo {
@@ -165,6 +144,7 @@ section {
   width: 80%;
   float: right;
   margin: 0;
+  margin-top: $margin-document;
   padding: 0;
   ul {
     padding: 0 0 0 $font-size *2;
@@ -188,7 +168,7 @@ xmp {
   color: darken($default-color, 50);
   margin: 0;
   margin-bottom: $font-size *3;
-  padding: 0 $font-size *2 $font-size *2;
+  padding: 0 $font-size *2 $font-size *1.3;
 }
 
 .sass-and-mixins {
