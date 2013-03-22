@@ -2,748 +2,369 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Code Notes</title>
+  <title>Spare Parts</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
-  <script src="jquery.localscroll.js" type="text/javascript"></script>
-  <script src="jquery.scrollTo.js" type="text/javascript"></script>
   <link rel="shortcut icon" href="favicon.ico" />
-  <script type="text/javascript">
-  $(document).ready(function() {
-     $('.nav').localScroll({duration:800});
-  });
-  </script>
+
 </head>
 
 <body>
 
-<a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/code-notes.html"><div class="edit">
-  Edit
-</div></a>
+<header>
+  <div class="container">
+  <nav>
+    <ul>
+      <li><a href="index.html">Spare Parts</a></li>
+      <li><a href="rails.html">Rails</a></li>
+      <li><a href="code-notes.html">Code Notes</a></li>
+    </ul>
+  </nav>
+  <a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/code-notes.html"><div class="header-controls">Edit</div></a>
+  </div>
+</header>
+
 
 <div class="container">
-<aside class="nav">
+<div id="example1">
+
+  <section>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h2>Git</h2>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="undo-a-certain-file">Undo a certain file</h3>
+  <p>Checkout the filename or the folder you want to undo</p>
+  <xmp>
+  git checkout app/views/filename
+  </xmp>
+  </article>
+
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="undo-a-certain-file">Log, Graph style</h3>
+  <xmp>
+  git log --oneline --decorate --all --graph
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="git-alias-for-shorthand">Git alias for shorthand</h3>
+  <xmp>
+  vim ~/.gitconfig
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="squashing-rebase">Squashing rebase</h3>
+  <xmp>
+  git rebase -i master
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h2>Wordpress</h2>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="bitnami">Bitnami</h3>
+  <p></p>
   <ul>
-    <div class="main"><a href="index.html">Spare Parts</a></div>
-    <div class="main"><a href="code-notes.html">Code Notes</a></div>
-
-    <li><h4>Rails</h4></li>
-    <li><a href="#create-a-rails-project">Create a Rails project</a></li>
-    <li><a href="#generate-controller">Generate a controller and action</a></li>
-    <li><a href="#change-layout-for-controller">Change layout for entire Controller</a></li>
-    <li><a href="#push-to-staging">Push to Staging</a></li>
-    <li><a href="#embed-javascript">Embed Javascript</a></li>
-    <li><a href="#localhost-on-the-iphone">Localhost on the iPhone</li>
-
-    <li><h4>Git</h4></li>
-    <li><a href="#undo-a-certain-file">Undo a certain file</a></li>
-    <li><a href="#undo-a-certain-file">Log, Graph style</li>
-    <li><a href="#git-alias-for-shorthand">Git alias for shorthand</a></li>
-    <li><a href="#squashing-rebase">Squashing rebase</a></li>
-
-    <li><h4>Wordpress</h4></li>
-    <li><a href="#bitnami">Bitnami</a></li>
-    <li><a href="#wp-local">Wordpress locally</a></li>
-    <li><a href="#create-child-theme">Create Child Theme</a></li>
-    <li><a href="#gh-pages">gh-pages</a></li>
-
-    <li><h4>Rails issues</h4></li>
-    <li><a href="#undefined-method">Undefined method</a></li>
-    <li><a href="#database-does-not-exist">Database does not exist</a></li>
-    <li><a href="#server-doesnt-start">Server doesn't start</a></li>
-    <li><a href="#cant-convert-symbol-to-integer">Can't convert symbol to integer</a></li>
-    <li><a href="#segmentation-fault">[BUG] Segmentation fault</a></li>
-    <li><a href="#psych-error">Psych error</a></li>
-
-    <li><h4>Installations</h4></li>
-    <li><a href="#installing-bourbon">Installing bourbon</a></li>
-    <li><a href="#installing-neat">Installing neat</a></li>
-    <li><a href="#installing-bootstrap">Installing Bootstrap</a></li>
-
-    <li><h4>HTML.erb</h4></li>
-    <li><a href="#create-a-text-link">Create a text link</a></li>
-    <li><a href="#image-as-link-declared-in-html">Image as link, declared in the HTML</a></li>
-    <li><a href="#image-as-a-link-delcared-in-scss">Image as link, declared in the SCSS</a></li>
-    <li><a href="#external-link">External link</a></li>
-    <li><a href="#internal-link-as-button">Internal link as button</a></li>
-    <li><a href="#internal-link-generated-page">Internal link as a button (specific, generated page)</a></li>
-    <li><a href="#repeat-elements">Repeat elements</a></li>
-    <li><a href="#render-a-partial">Render a partial</a></li>
-    <li><a href="#area-that-appears-on-many-pages">Area that appears on many pages</a></li>
-    <li><a href="#insert-image-with-class">Insert an image with a class</a></li>
-    <li><a href="#insert-image-with-asset-pipeline">Insert an image using the asset pipeline</a></li>
-    <li><a href="#linking-javascript-assets">Linking Javascript assets</a></li>
-    <li><a href="#linking-stylesheet-assets">Linking Stylesheet assets</a></li>
-
-    <li><h4>SCSS</h4></li>
-    <li><a href="#css-image-assets">CSS Image Assets</a></li>
-    <li><a href="#cant-find-class-in-ruby">Can't find an id or class in ruby?</a></li>
-
-    <li><h4>Fonts</h4></li>
-    <li><a href="#fontello">Fontello</a></li>
-
-    <li><h4>Forms</h4></li>
-    <li><a href="#formtastic">Formtastic</a></li>
-    <li><a href="#simple-form">Simple form</a></li>
+    <li>Install bitnami</li>
+    <li>Download latest wordpress</li>
+    <li></li>
+    <li>Have manager-osx running</li>
+    <li></li>
   </ul>
-
-</aside>
-
-
-<section>
-
-
-<h1>Code Notes</h1>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<div class="rails">
-<h2>Rails</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="create-a-rails-project">Creating a Rails project</h3>
-<p>With the command line, navigate to where you want the project folder to be generated (e.g. documents/my_rails_projects/) and type the following to create a project called project_name:</p>
-<xmp>
-rails new project_name
-</xmp>
-<p>Navigate to that folder and type the following to create a controller called posts:</p>
-<xmp>
-rails g controller posts
-</xmp>
-<p>In text editor, open the file project_name/app/controllers/posts_controller and make sure it says:</p>
-<xmp>
-class PostsController < ApplicationController
-def index
-end
-end
-</xmp>
-<p>Navigate to project_name/app/views/posts/ and create the file index.html.erb in that folder. Open project_name/config/routes.rb and under the first row, enter:</p>
-<xmp>
-resources :posts
-</xmp>
-<p>With the command line tool, make sure you are have navigated to the project folder, then type:</p>
-<xmp>
-rails s
-</xmp>
-<p>In your browser, go to localhost:3000/posts. To stop the server, hit ctrl-C.</p>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="generate-controller">Generate a controller and action</h3>
-<xmp>
-rails g controller <controller name> <action>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="change-layout-for-controller">Change layout for entire Controller</h3>
-<xmp>
-class ProductsController < ApplicationController
-layout "inventory"
-end
-</xmp>
-<p>In the 'layouts' folder under 'views' you can save different layout styles. In the controller you specify which layout will be used.</p>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="push-to-staging">Push to staging</h3>
-<xmp>
-git remote show
-</xmp>
-<p>Result should say "origin" as well as "staging". If not "staging" then type:</p>
-<xmp>
-git remote add staging git@heroku.com:projectname-staging.git
-</xmp>
-<p>Try git remote show again. Then push master to staging:</p>
-<xmp>
-git push staging master
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="embed-javascript">Embed Javascript</h3>
-<p>In the assets > javascripts > application.js add:</p>
-<xmp>
-//= require filename.js
-</xmp>
-<p>Put any js action at the end of the application.js file</p>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="localhost-on-the-iphone">Localhost on the iPhone</h3>
-<p>Go to "Open Network Preferences" and copy the ip to the iPhone. Make sure to be on the same wifi as the laptop.</p>
-<xmp>
-192.168.xx.xx:3000
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>Git</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="undo-a-certain-file">Undo a certain file</h3>
-<p>Checkout the filename or the folder you want to undo</p>
-<xmp>
-git checkout app/views/filename
-</xmp>
-</article>
-
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="undo-a-certain-file">Log, Graph style</h3>
-<xmp>
-git log --oneline --decorate --all --graph
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="git-alias-for-shorthand">Git alias for shorthand</h3>
-<xmp>
-vim ~/.gitconfig
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="squashing-rebase">Squashing rebase</h3>
-<xmp>
-git rebase -i master
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>Wordpress</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="bitnami">Bitnami</h3>
-<p></p>
-<ul>
-  <li>Install bitnami</li>
-  <li>Download latest wordpress</li>
-  <li></li>
-  <li>Have manager-osx running</li>
-  <li></li>
-</ul>
-<xmp>
-
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="wp-local">Wordpress</h3>
-<p></p>
-<ul>
-  <li>Install MAMP</li>
-  <li>Start servers, set apache to 9999</li>
-  <li>Download latest wordpress</li>
-  <li>Install Sequel Pro</li>
-  <li>Go to "Socket" and click Connect (should be local, root, root). If servers don't start, turn off mysqld process in Activity Manager.</li>
-  <li>Choose database, Add database, call it wordpress.</li>
-  <li>wp-config-sample.php (rename it to wp-config.php)</li>
-  <li>open in text editor.</li>
-  <li>change database to "wordpress". username: root, password: root</li>
-  <li>go to localhost:9999 (or http://localhost:9999/wp-admin/install.php) and setup the local name etc for local files.</li>
-  <li></li>
-</ul>
-<ul>
-
-  <li>Work locally: go to localhost:9999/wp-admin to log in</li>
-</ul>
-<xmp>
-
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="create-child-theme">Create Child Theme</h3>
-<p></p>
-<ul>
-  <li>Use the BLANK-Theme by Chris Coyier</li>
-  <li>Create new folder in themes.</li>
-  <li>Create a style.css in that folder and enter this in there:</li>
-</ul>
-<xmp>
-/*
-Theme Name: gameface
-Description: gameface theme based on the BLANK-Theme
-Author: Your name here
-Template: BLANK-Theme
-*/
-
-@import url("../BLANK-Theme/style.css");
-
-body {
-  background-color: green;
-}
-</xmp>
-
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>GH-pages</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="gh-pages">gh-pages</h3>
-<p></p>
-<ul>
-  <li></li>
-  <li></li>
-</ul>
-<xmp>
-
-</xmp>
-</article>
-
-
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>Rails Issues</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="undefined-method">Undefined method</h3>
-<p>If "undefined method `body' for..."</p>
-<xmp>
-rake db:migrate
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="database-does-not-exist">Database does not exist</h3>
-<p>If "database ... does not exist":</p>
-<xmp>
-rake db:create db:migrate
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="server-doesnt-start">Server doesn't start</h3>
-<xmp>
-bundle exec rake db:migrate
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="cant-convert-symbol-to-integer">Can't convert symbol to integer</h3>
-<p>Restart server</p>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="segmentation-fault">[BUG] Segmentation fault</h3>
-<xmp>
-gem uninstall sqlite3
-gem install sqlite3
-bundle install
-rvm use ruby-1.9.3-p194
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="psych-error">Psych error</h3>
-<xmp>
-gem uninstall psych
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>Installations</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="installing-bourbon">Installing bourbon</h3>
-<a href="http://bourbon.io/ ">Bourbon</a>
-<p>Add the following line in your Gemfile:</p>
-<xmp>
-gem 'bourbon'
-</xmp>
-<p>In the command line, enter:</p>
-<xmp>
-bundle install
-</xmp>
-<p>Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss</p>
-<p>in application.css.scss, delete the folliwing line:</p>
-<xmp>
-*= require_tree .
-</xmp>
-<p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
-<xmp>
-@import "bourbon";
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="installing-neat">Installing neat</h3>
-<a href="http://neat.bourbon.io/">Neat</a>
-<p>First: Install Bourbon (see above). Add the following line in your Gemfile:</p>
-<xmp>
-gem 'neat'
-</xmp>
-<p>In the command line, enter:</p>
-<xmp>
-bundle install
-</xmp>
-<p>If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:</p>
-<xmp>
-bundle update sass
-</xmp>
-<p>Within your application.css.scss file place the following on top:</p>
-<xmp>
-@import "bourbon";
-@import "neat";
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="installing-bootstrap">Installing Bootstrap</h3>
-<a href="http://bootstrap.com">Bootstrap</a>
-<p>Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:</p>
-<xmp>
-@import "bootstrap.css.scss";
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>HTML.ERB</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="create-a-text-link">Create a text link</h3>
-<a href="http://guides.rubyonrails.org/routing.html">Routing in Ruby on Rails</a>
-<xmp>
-<%= link_to 's', terms_path %>
-</xmp>
-<p>"Terms" is the text shown for the link. The path needs to exist in config/routes.rb e.g.
-get 'terms', to: 'welcome#terms' for the link to the page "terms" under the folder "welcome". Restart server after updating the rb file.</p>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-
-<article>
-<h3 id="image-as-link-declared-in-html">Image as link, declared in the HTML</h3>
-<xmp>
-<%= link_to root_path, :id => "root" do %>
-<img />
-<% end %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="image-as-a-link-delcared-in-scss">Image as link, declared in the SCSS</h3>
-<xmp>
-<%= link_to('', root_path, class: 'my_image') %>
-</xmp>
-<p>In the SCSS, use the "my_image" class to add background-image, or other styling. The '' makes sure no text is used for the link.</p>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="external-link">External link</h3>
-<xmp>
-<%= link_to("http://www.dn.se") do %>
-<img />
-<% end %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="internal-link-as-button">Internal link as button</h3>
-<xmp>
-<%= button_to "This is a link button", root_path, :method => "get", class: 'btn' %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="internal-link-generated-page">Internal link as a button (specific, generated page)</h3>
-
-<p>To link to a page that is created, that is specific, go to controllers and the correct controller file (e.g. if the page is a "race" then go to the "races_controller"). Find the</p>
-<xmp>
-def <name of the html you are working in>
-</xmp>
-
-<p>and copy the @race (or whatever has an @ in front of it). Then use this link code:</p>
-
-<xmp>
-<%= button_to "Back", race_path(@race), :method => "get", class: 'btn' %>
-</xmp>
-
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="repeat-elements">Repeat elements</h3>
-<xmp>
-<% 3.times do %>
-<li></li>
-<% end %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="render-a-partial">Render a partial</h3>
-<xmp>
-<%= render 'folder/sidebar' %>
-</xmp>
-<p>When saving partials, make sure their names start with an underscore and have the file type _PARTIAL.html.erb. They should not be called with an underscore though.</p>
-<xmp>
-  <%= render purchaseable.events, section: purchaseable %>
-</xmp>
-<p>This renders an array of events from the 'events' folder</p>
-
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="area-that-appears-on-many-pages">Area that appears on many pages</h3>
-<p>In the layout/application.html.erb</p>
-<xmp>
-<%= yield :top_container %>
-</xmp>
-<p>On the specific page</p>
-<xmp>
-<% content_for :top_container do %>
-...content...
-<% end %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="insert-image-with-class">Insert an image with a class</h3>
-<xmp>
-<%= image_tag('divider_arrow.png', :class => "arrow") %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="insert-image-with-asset-pipeline">Insert an image using the asset pipeline</h3>
-<xmp>
-<%= image_tag("foo.png") %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<article>
-<h3 id="linking-javascript-assets">Linking Javascript assets</h3>
-<xmp>
-<%= javascript_include_tag "main", "columns" %>
-</xmp>
-</article>
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="linking-stylesheet-assets">Linking Stylesheet assets</h3>
-<xmp>
-<%= stylesheet_link_tag "main", "columns" %>
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>SCSS</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="css-image-assets">CSS Image Assets</h3>
-<xmp>
-background: image_url("image.png");
-</xmp>
-</article>
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="cant-find-class-in-ruby">Can't find an id or class in ruby?</h3>
-
-<p>Looking for flash_success could be in the format:</p>
-<xmp>
-flash[:success]
-</xmp>
-</article>
-
-
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>Fonts</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<article>
-<h3 id="fontello">Fontello</h3>
-
-<a href="http://fontello.com/">Fontello</a>
-
-<ul>
-  <li>Select files</li>
-  <li>Download them and place the font files in assets/fonts</li>
-  <li>In the HTML, declare the icon:</li>
-</ul>
-<xmp>
-<i class="icon-export"></i>
-</xmp>
-
-<p>In the SCSS, make sure all the file types are called for:</p>
-<xmp>
-@font-face {
-font-family: 'fontello';
-src: url('fontello.eot');
-src:url('fontello.eot?#iefix') format('embedded-opentype'),
-url('fontello.svg#icomoon') format('svg'),
-url('fontello.woff') format('woff'),
-url('fontello.ttf') format('truetype');
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-font-family: 'fontello';
-font-style: normal;
-font-weight: normal;
-speak: none;
-display: inline-block;
-}
-
-.icon-export:before { content: '\e715'; } /* '' */
-</xmp>
-</article>
-
-
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h2>Forms</h2>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<article>
-<h3 id="formtastic">Formtastic</h3>
-
-<a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
-
-<h4>Changing a label for an input</h4>
-<xmp>
-<%= f.input :defaultname, label: 'Not the default name' %>
-If 'label:' is not used the label will read whatever the default name is.
-</xmp>
-</article>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h4>Number of rows for text area</h4>
-<xmp>
-<%= f.input :textareaname, input_html: {rows: 10} %>
-input_html: can be used for other things such as disabling text fields.
-</xmp>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h3 id="simple-form">Simple form</h3>
-
-<a href="https://github.com/plataformatec/simple_form">Simple form</a>
-
-<h4>Add generic text field</h4>
-
-<%= text_field :logo, as: :file, label: "Race Logo" %>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h4>Add class to an input</h4>
-<xmp>
-<%= f.button :submit, :class => "btn" %>
-</xmp>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-<h4>Textarea</h4>
-<xmp>
-<%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
-</xmp>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <xmp>
+
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="wp-local">Wordpress</h3>
+  <p></p>
+  <ul>
+    <li>Install MAMP</li>
+    <li>Start servers, set apache to 9999</li>
+    <li>Download latest wordpress</li>
+    <li>Install Sequel Pro</li>
+    <li>Go to "Socket" and click Connect (should be local, root, root). If servers don't start, turn off mysqld process in Activity Manager.</li>
+    <li>Choose database, Add database, call it wordpress.</li>
+    <li>wp-config-sample.php (rename it to wp-config.php)</li>
+    <li>open in text editor.</li>
+    <li>change database to "wordpress". username: root, password: root</li>
+    <li>go to localhost:9999 (or http://localhost:9999/wp-admin/install.php) and setup the local name etc for local files.</li>
+    <li></li>
+  </ul>
+  <ul>
+
+    <li>Work locally: go to localhost:9999/wp-admin to log in</li>
+  </ul>
+  <xmp>
+
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="create-child-theme">Create Child Theme</h3>
+  <p></p>
+  <ul>
+    <li>Use the BLANK-Theme by Chris Coyier</li>
+    <li>Create new folder in themes.</li>
+    <li>Create a style.css in that folder and enter this in there:</li>
+  </ul>
+  <xmp>
+  /*
+  Theme Name: gameface
+  Description: gameface theme based on the BLANK-Theme
+  Author: Your name here
+  Template: BLANK-Theme
+  */
+
+  @import url("../BLANK-Theme/style.css");
+
+  body {
+    background-color: green;
+  }
+  </xmp>
+
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h2>GH-pages</h2>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="gh-pages">gh-pages</h3>
+  <p></p>
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
+  <xmp>
+
+  </xmp>
+  </article>
+
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h2>Installations</h2>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="installing-bourbon">Installing bourbon</h3>
+  <a href="http://bourbon.io/ ">Bourbon</a>
+  <p>Add the following line in your Gemfile:</p>
+  <xmp>
+  gem 'bourbon'
+  </xmp>
+  <p>In the command line, enter:</p>
+  <xmp>
+  bundle install
+  </xmp>
+  <p>Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss</p>
+  <p>in application.css.scss, delete the folliwing line:</p>
+  <xmp>
+  *= require_tree .
+  </xmp>
+  <p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+  <xmp>
+  @import "bourbon";
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="installing-neat">Installing neat</h3>
+  <a href="http://neat.bourbon.io/">Neat</a>
+  <p>First: Install Bourbon (see above). Add the following line in your Gemfile:</p>
+  <xmp>
+  gem 'neat'
+  </xmp>
+  <p>In the command line, enter:</p>
+  <xmp>
+  bundle install
+  </xmp>
+  <p>If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:</p>
+  <xmp>
+  bundle update sass
+  </xmp>
+  <p>Within your application.css.scss file place the following on top:</p>
+  <xmp>
+  @import "bourbon";
+  @import "neat";
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="installing-bootstrap">Installing Bootstrap</h3>
+  <a href="http://bootstrap.com">Bootstrap</a>
+  <p>Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:</p>
+  <xmp>
+  @import "bootstrap.css.scss";
+  </xmp>
+  </article>
+
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h2>Fonts</h2>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <article>
+  <h3 id="fontello">Fontello</h3>
+
+  <a href="http://fontello.com/">Fontello</a>
+
+  <ul>
+    <li>Select files</li>
+    <li>Download them and place the font files in assets/fonts</li>
+    <li>In the HTML, declare the icon:</li>
+  </ul>
+  <xmp>
+  <i class="icon-export"></i>
+  </xmp>
+
+  <p>In the SCSS, make sure all the file types are called for:</p>
+  <xmp>
+  @font-face {
+  font-family: 'fontello';
+  src: url('fontello.eot');
+  src:url('fontello.eot?#iefix') format('embedded-opentype'),
+  url('fontello.svg#icomoon') format('svg'),
+  url('fontello.woff') format('woff'),
+  url('fontello.ttf') format('truetype');
+  }
+
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  }
+
+  .icon-export:before { content: '\e715'; } /* '' */
+  </xmp>
+  </article>
+
+
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h2>Forms</h2>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <article>
+  <h3 id="formtastic">Formtastic</h3>
+
+  <a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
+
+  <h4>Changing a label for an input</h4>
+  <xmp>
+  <%= f.input :defaultname, label: 'Not the default name' %>
+  If 'label:' is not used the label will read whatever the default name is.
+  </xmp>
+  </article>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h4>Number of rows for text area</h4>
+  <xmp>
+  <%= f.input :textareaname, input_html: {rows: 10} %>
+  input_html: can be used for other things such as disabling text fields.
+  </xmp>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h3 id="simple-form">Simple form</h3>
+
+  <a href="https://github.com/plataformatec/simple_form">Simple form</a>
+
+  <h4>Add generic text field</h4>
+
+  <%= text_field :logo, as: :file, label: "Race Logo" %>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h4>Add class to an input</h4>
+  <xmp>
+  <%= f.button :submit, :class => "btn" %>
+  </xmp>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h4>Textarea</h4>
+  <xmp>
+  <%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
+  </xmp>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+  </div>
+  </section>
+
+
+
+</div>
+</div><!-- container -->
+
+
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>
+<script type='text/javascript' src='lib/jquery.erToc.min.js'></script>
+<script type='text/javascript'>
+$(document).ready(function() {
+    $('#example1').erToc({'goTopNode':'#example1', 'startLevel': 'h2', 'numberedSuffix':'. '});
+    $('#example2').erToc({'goTopNode':'#example2', 'startLevel': 'h2', 'tocScroll': false});
+    $('#example3').erToc({'goTopNode':'#example3', 'startLevel': 'h2', 'numbered': false, 'tocClass': 'er_toc er_toc_disc'});
+});
+</script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+

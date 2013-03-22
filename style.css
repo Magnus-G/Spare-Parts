@@ -1,168 +1,192 @@
-/* line 32, style.scss */
+/* line 35, style.scss */
 html {
   height: 100%;
 }
 
-/* line 36, style.scss */
+/* line 39, style.scss */
 .main {
-  background-color: #8d8d8d;
+  background-color: #cccccc;
   display: inline-block;
   padding: 13px;
   border-radius: 3px;
   box-shadow: 0 1px 1px black;
 }
 
-/* line 44, style.scss */
-.edit {
-  background-color: white;
-  color: black;
-  padding: 26px;
-  line-height: 0;
-  position: fixed;
-  right: 0;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  margin-top: 26px;
-}
-
-/* line 56, style.scss */
+/* line 47, style.scss */
 body {
-  background-color: silver;
+  background-color: white;
   font-family: helvetica;
   height: 100%;
   margin: 0;
 }
 
-/* line 63, style.scss */
-p {
-  font-size: 13px;
-  color: #272727;
+/* line 54, style.scss */
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* line 68, style.scss */
+/* line 59, style.scss */
+header {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  box-shadow: 0 1px 1px #cccccc;
+  color: white;
+  overflow: auto;
+  padding: 0;
+  position: fixed;
+}
+/* line 69, style.scss */
+header nav {
+  float: left;
+}
+/* line 72, style.scss */
+header nav a {
+  float: left;
+  color: #31e831;
+}
+/* line 77, style.scss */
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 81, style.scss */
+header nav ul li {
+  display: inline;
+}
+/* line 84, style.scss */
+header nav ul li a {
+  display: inline;
+  font-weight: bold;
+  line-height: 60px;
+  padding: 0 40px 0 0;
+}
+/* line 99, style.scss */
+header .header-controls {
+  float: right;
+  color: #31e831;
+  font-weight: bold;
+  line-height: 60px;
+  padding: 0 40px;
+}
+
+/* line 108, style.scss */
+p {
+  font-size: 13px;
+  color: #666666;
+}
+
+/* line 113, style.scss */
 h1 {
   text-transform: uppercase;
   font-size: 13px;
 }
 
-/* line 73, style.scss */
+/* line 118, style.scss */
 h2 {
-  color: #272727;
+  color: #666666;
   line-height: 39px;
-  border-bottom: 1px solid #8d8d8d;
+  border-bottom: 1px solid #cccccc;
 }
 
-/* line 79, style.scss */
+/* line 124, style.scss */
 h3 {
-  color: #5a5a5a;
-  text-shadow: 0 1px 1px #f3f3f3;
+  color: #999999;
+  text-shadow: 0 1px 1px white;
 }
 
-/* line 83, style.scss */
+/* line 128, style.scss */
 h4 {
   margin: 0;
-  color: #272727;
-  border-bottom: 1px solid #8d8d8d;
+  color: #666666;
+  border-bottom: 1px solid #cccccc;
   text-transform: uppercase;
   font-size: 13px;
   padding: 13px 0 6.5px 0;
   margin-bottom: 13px;
 }
 
-/* line 93, style.scss */
+/* line 138, style.scss */
 a {
   font-size: 13px;
-  color: white;
+  color: #0d730d;
   text-decoration: none;
   line-height: 20.8px;
 }
-/* line 100, style.scss */
+/* line 145, style.scss */
 a:hover {
-  color: white;
+  color: #31e831;
 }
 
-/* line 105, style.scss */
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* line 110, style.scss */
-aside {
-  width: 20%;
-  float: left;
-  position: relative;
-  height: 100%;
-}
-/* line 116, style.scss */
-aside ul {
-  position: fixed;
-  padding: 0;
-  margin-top: 26px;
-}
-/* line 121, style.scss */
-aside ul li {
-  list-style: none;
-  line-height: 10px;
-}
-/* line 125, style.scss */
-aside ul li a {
-  font-size: 8.667px;
-  line-height: 8.667px;
-}
-/* line 131, style.scss */
-aside .todo {
-  position: fixed;
-  top: 900px;
-  font-size: 13px;
-  color: #272727;
-}
-/* line 136, style.scss */
-aside .todo p {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 143, style.scss */
+/* line 151, style.scss */
 section {
   width: 80%;
   float: right;
   margin: 0;
-  margin-top: 26px;
+  margin-top: 60px;
   padding: 0;
 }
-/* line 149, style.scss */
+/* line 157, style.scss */
 section ul {
   padding: 0 0 0 26px;
 }
-/* line 151, style.scss */
+/* line 159, style.scss */
 section ul li {
   font-size: 13px;
   margin-bottom: 6.5px;
-  color: #272727;
+  color: #666666;
 }
-/* line 155, style.scss */
+/* line 163, style.scss */
 section ul li span {
   font-style: italic;
 }
-/* line 158, style.scss */
+/* line 166, style.scss */
 section ul li a {
   display: inline;
 }
 
-/* line 165, style.scss */
+/* line 173, style.scss */
 xmp {
-  box-shadow: inset 0 1px 2px #a7a7a7, 0 1px 1px #dadada;
-  background-color: #b8b8b8;
-  border: 1px solid #b1b1b1;
+  box-shadow: inset 0 1px 2px #e6e6e6, 0 1px 1px white;
+  background-color: #f7f7f7;
+  border: 1px solid #f0f0f0;
   border-radius: 3px;
-  color: #414141;
+  color: gray;
   margin: 0;
   margin-bottom: 39px;
   padding: 0 26px 16.9px;
 }
 
-/* line 220, style.scss */
+/* line 184, style.scss */
+.er_toc {
+  position: fixed;
+  top: 60px;
+}
+/* line 188, style.scss */
+.er_toc ul {
+  padding: 0;
+}
+/* line 191, style.scss */
+.er_toc ul li {
+  list-style: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 196, style.scss */
+.er_toc ul li ul li a {
+  color: rgba(13, 115, 13, 0.7);
+  font-weight: normal;
+  text-transform: none;
+}
+
+/* line 206, style.scss */
+.er_toc_tag a {
+  float: right;
+  text-shadow: none;
+}
+
+/* line 232, style.scss */
 select,
 textarea,
 input[type="text"],
@@ -188,7 +212,7 @@ input[type="color"] {
   vertical-align: middle;
 }
 
-/* line 231, style.scss */
+/* line 243, style.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 4px 0;
