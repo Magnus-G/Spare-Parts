@@ -5,7 +5,7 @@ html {
 
 /* line 39, style.scss */
 .main {
-  background-color: #cccccc;
+  background-color: #cacab0;
   display: inline-block;
   padding: 13px;
   border-radius: 3px;
@@ -14,7 +14,7 @@ html {
 
 /* line 47, style.scss */
 body {
-  background-color: white;
+  background-color: #f3f3ed;
   font-family: helvetica;
   height: 100%;
   margin: 0;
@@ -31,7 +31,7 @@ header {
   width: 100%;
   height: 60px;
   background-color: black;
-  box-shadow: 0 1px 1px #cccccc;
+  box-shadow: 0 1px 1px #cacab0;
   color: white;
   overflow: auto;
   padding: 0;
@@ -44,7 +44,7 @@ header nav {
 /* line 72, style.scss */
 header nav a {
   float: left;
-  color: #31e831;
+  color: #82ca82;
 }
 /* line 77, style.scss */
 header nav ul {
@@ -65,7 +65,7 @@ header nav ul li a {
 /* line 99, style.scss */
 header .header-controls {
   float: right;
-  color: #31e831;
+  color: #82ca82;
   font-weight: bold;
   line-height: 60px;
   padding: 0 40px;
@@ -74,7 +74,7 @@ header .header-controls {
 /* line 108, style.scss */
 p {
   font-size: 13px;
-  color: #666666;
+  color: #575757;
 }
 
 /* line 113, style.scss */
@@ -85,22 +85,22 @@ h1 {
 
 /* line 118, style.scss */
 h2 {
-  color: #666666;
+  color: #575757;
   line-height: 39px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 /* line 124, style.scss */
 h3 {
-  color: #999999;
+  color: #8a8a8a;
   text-shadow: 0 1px 1px white;
 }
 
 /* line 128, style.scss */
 h4 {
   margin: 0;
-  color: #666666;
-  border-bottom: 1px solid #cccccc;
+  color: #575757;
+  border-bottom: 1px solid #bdbdbd;
   text-transform: uppercase;
   font-size: 13px;
   padding: 13px 0 6.5px 0;
@@ -110,13 +110,13 @@ h4 {
 /* line 138, style.scss */
 a {
   font-size: 13px;
-  color: #0d730d;
+  color: #367d36;
   text-decoration: none;
   line-height: 20.8px;
 }
 /* line 145, style.scss */
 a:hover {
-  color: #31e831;
+  color: #82ca82;
 }
 
 /* line 151, style.scss */
@@ -135,7 +135,7 @@ section ul {
 section ul li {
   font-size: 13px;
   margin-bottom: 6.5px;
-  color: #666666;
+  color: #575757;
 }
 /* line 163, style.scss */
 section ul li span {
@@ -148,20 +148,20 @@ section ul li a {
 
 /* line 173, style.scss */
 xmp {
-  box-shadow: inset 0 1px 2px #e6e6e6, 0 1px 1px white;
-  background-color: #f7f7f7;
-  border: 1px solid #f0f0f0;
+  box-shadow: inset 0 1px 2px #dfdfce, 0 1px 1px white;
+  background-color: #f9f9f6;
+  border: 1px solid #e7e7db;
   border-radius: 3px;
-  color: gray;
+  color: #575757;
   margin: 0;
   margin-bottom: 39px;
-  padding: 0 26px 16.9px;
+  padding: 0 26px 13px 26px;
 }
 
 /* line 184, style.scss */
 .er_toc {
   position: fixed;
-  top: 60px;
+  top: 73px;
 }
 /* line 188, style.scss */
 .er_toc ul {
@@ -174,19 +174,23 @@ xmp {
   text-transform: uppercase;
 }
 /* line 196, style.scss */
-.er_toc ul li ul li a {
-  color: rgba(13, 115, 13, 0.7);
+.er_toc ul li ul {
+  margin: 3.25px 0 26px 0;
+}
+/* line 200, style.scss */
+.er_toc ul li ul li {
+  color: #367d36;
   font-weight: normal;
   text-transform: none;
 }
 
-/* line 206, style.scss */
+/* line 210, style.scss */
 .er_toc_tag a {
   float: right;
   text-shadow: none;
 }
 
-/* line 232, style.scss */
+/* line 236, style.scss */
 select,
 textarea,
 input[type="text"],
@@ -212,7 +216,7 @@ input[type="color"] {
   vertical-align: middle;
 }
 
-/* line 243, style.scss */
+/* line 247, style.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 4px 0;

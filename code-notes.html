@@ -297,7 +297,9 @@
 
   <a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
 
-  <h4>Changing a label for an input</h4>
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h3>Changing a label for an input</h3>
   <xmp>
   <%= f.input :defaultname, label: 'Not the default name' %>
   If 'label:' is not used the label will read whatever the default name is.
@@ -306,7 +308,7 @@
 
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h4>Number of rows for text area</h4>
+  <h3>Number of rows for text area</h3>
   <xmp>
   <%= f.input :textareaname, input_html: {rows: 10} %>
   input_html: can be used for other things such as disabling text fields.
@@ -318,20 +320,22 @@
 
   <a href="https://github.com/plataformatec/simple_form">Simple form</a>
 
-  <h4>Add generic text field</h4>
+  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+  <h3>Add generic text field</h3>
 
   <%= text_field :logo, as: :file, label: "Race Logo" %>
 
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h4>Add class to an input</h4>
+  <h3>Add class to an input</h3>
   <xmp>
   <%= f.button :submit, :class => "btn" %>
   </xmp>
 
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h4>Textarea</h4>
+  <h3>Textarea</h3>
   <xmp>
   <%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
   </xmp>
