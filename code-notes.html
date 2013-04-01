@@ -390,6 +390,21 @@
 
 <article>
 <h3>Internet Explorer Exceptions</h3>
+<p>Include the following in the very top of the page</p>
+<xmp>
+<!DOCTYPE html>
+<!--[if lt IE 10]> <html class="ie"> <![endif]-->
+<!--[if !IE]><!--> <html class="not-ie"> <!--<![endif]-->
+<html>
+</xmp>
+<p>Anything that needs a tweak for IE below version 10 can be called like so:</p>
+<xmp>
+.ie {
+  .theclass {
+    background-color: red;
+  }
+</xmp>
+
 <p>From <a href="http://css-tricks.com/how-to-create-an-ie-only-stylesheet/">Chris Coyier</a></p>
 <xmp>
 Target ALL VERSIONS of IE
