@@ -38,6 +38,19 @@
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
   <article>
+  <h3>Someone else's branch</h3>
+  <p>On master. We have a branch (our-branch) with code that needs to be combined with someone else's code.</p>
+  <xmp>
+  git checkout -b name-of-others-branch
+  git pull origin name-of-others-branch
+  </xmp>
+  <p>On the branch where you worked before, our-branch</p>
+  <xmp>
+  git rebase name-of-others-branch
+  </xmp>
+  </article>
+
+  <article>
   <h3 id="undo-a-certain-file">Undo a certain file</h3>
   <p>Checkout the filename or the folder you want to undo</p>
   <xmp>
