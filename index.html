@@ -655,33 +655,6 @@ table tr:nth-child(even) {
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
-<h3>Nav staying active on click. MIGHT BE BROKE</h3>
-<p>Download and add jQuery to head. Create a .highlight class.</p>
-<xmp>
-<head>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $("nav ul li a").click(function(event){
-      $("nav ul li a").removeClass("highlight");
-      $(this).addClass("highlight");
-    event.preventDefault();
-    });
-  });
-</script>
-</head>
-
-<body>
-  <nav>
-    <ul>
-      <li><a href="" class="highlight">Home</a></li>
-      <li><a href="">Other</a></li>
-      ...
-</xmp>
-</article>
-
-<article>
 <h3 id="smooth-scroll">Smooth Scroll</h3>
 <p>In head:</p>
 <xmp>
