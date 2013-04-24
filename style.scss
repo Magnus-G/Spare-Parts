@@ -59,7 +59,7 @@ body {
 header {
   width: 100%;
   height: $header-height;
-  background-color: $black-color;
+  background-color: $white-color;
   @include shadow($dark-color);
   color: white;
   overflow: auto;
