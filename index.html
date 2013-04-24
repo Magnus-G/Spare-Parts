@@ -120,6 +120,103 @@ $information-color: desaturate(blue, 50);
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
+<h3>Responsive Navbar</h3>
+<xmp>
+<a href='index.html'><div class='logo'><img src='images/logo-gf.png' alt=''></div></a>
+<div class="menu-button"><a href="">Menu</a></div>
+<nav>
+  <ul data-breakpoint="800" class="flexnav">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="team.html">Team</a>
+    </li>
+  </ul>
+</nav>
+
+.menu-button {
+    a {
+      @extend .nav-text;
+      float: right;
+      @include padding-responsive();
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  nav {
+    height: 20px;
+    float: right;
+    width: 100%;
+
+    ul.flexnav {
+      -webkit-transform-style: preserve-3d; // stop webkit flicker
+      overflow: hidden;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+
+      li {
+        position: relative;
+        overflow: hidden;
+
+
+        a {
+          @extend .nav-text;
+          text-align: center;
+          position: relative;
+          display: block;
+          z-index: 99999999;
+          padding: 10px 0;
+          line-height: 19px;
+          overflow: hidden;
+          background-color: $black-color;
+
+          a:last-child {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: $breakpoint-3) {
+
+    .menu-button {
+      display: none;
+    }
+
+    nav {
+      width: auto;
+      padding-right: $padding-mid;
+
+      ul.flexnav {
+        overflow: visible;
+
+        li {
+          position: relative;
+          list-style: none;
+          padding-left: 20px;
+          float: left;
+          display: block;
+          overflow: visible;
+
+          a {
+            background-color: transparent;
+            text-align: left;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+</xmp>
+</article>
+
+<article>
 <h3>Center horizontally in div</h3>
 <p>For the inside div, use these styles:</p>
 <xmp>
