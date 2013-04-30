@@ -27,424 +27,424 @@
 <div class="container">
 <div id="example1">
 
-  <section> <!-- whole page main content section -->
+<section> <!-- whole page main content section -->
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h2>Git</h2>
+<h2>Git</h2>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3>Someone else's branch</h3>
-  <p>On master. We have a branch (our-branch) with code that needs to be combined with someone else's code.</p>
-  <xmp>
-  git checkout -b name-of-others-branch
-  git pull origin name-of-others-branch
-  </xmp>
-  <p>On the branch where you worked before, our-branch</p>
-  <xmp>
-  git rebase name-of-others-branch
-  </xmp>
-  </article>
+<article>
+<h3>Someone else's branch</h3>
+<p>On master. We have a branch (our-branch) with code that needs to be combined with someone else's code.</p>
+<xmp>
+git checkout -b name-of-others-branch
+git pull origin name-of-others-branch
+</xmp>
+<p>On the branch where you worked before, our-branch</p>
+<xmp>
+git rebase name-of-others-branch
+</xmp>
+</article>
 
-  <article>
-  <h3 id="undo-a-certain-file">Undo a certain file</h3>
-  <p>Checkout the filename or the folder you want to undo</p>
-  <xmp>
-  git checkout app/views/filename
-  </xmp>
-  </article>
+<article>
+<h3 id="undo-a-certain-file">Undo a certain file</h3>
+<p>Checkout the filename or the folder you want to undo</p>
+<xmp>
+git checkout app/views/filename
+</xmp>
+</article>
 
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3 id="undo-a-certain-file">Log, Graph style</h3>
-  <xmp>
-  git log --oneline --decorate --all --graph
-  </xmp>
-  </article>
+<article>
+<h3 id="undo-a-certain-file">Log, Graph style</h3>
+<xmp>
+git log --oneline --decorate --all --graph
+</xmp>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3 id="git-alias-for-shorthand">Git alias for shorthand</h3>
-  <xmp>
-  vim ~/.gitconfig
-  </xmp>
-  </article>
+<article>
+<h3 id="git-alias-for-shorthand">Git alias for shorthand</h3>
+<xmp>
+vim ~/.gitconfig
+</xmp>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3 id="squashing-rebase">Squashing rebase</h3>
-  <xmp>
-  git rebase -i master
-  </xmp>
-  </article>
+<article>
+<h3 id="squashing-rebase">Squashing rebase</h3>
+<xmp>
+git rebase -i master
+</xmp>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3>Rename branch</h3>
-  <xmp>
+<article>
+<h3>Rename branch</h3>
+<xmp>
 git branch -m old_branch new_branch
-  </xmp>
-  </article>
+</xmp>
+</article>
 
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h2>Wordpress</h2>
+<h2>Wordpress</h2>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3 id="bitnami">Bitnami</h3>
-  <p></p>
-  <ul>
-    <li>Install bitnami</li>
-    <li>Download latest wordpress</li>
-    <li></li>
-    <li>Have manager-osx running</li>
-    <li></li>
-  </ul>
-  <xmp>
+<article>
+<h3 id="bitnami">Bitnami</h3>
+<p></p>
+<ul>
+<li>Install bitnami</li>
+<li>Download latest wordpress</li>
+<li></li>
+<li>Have manager-osx running</li>
+<li></li>
+</ul>
+<xmp>
 
-  </xmp>
-  </article>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <article>
-  <h3 id="wp-local">Wordpress</h3>
-  <p></p>
-  <ul>
-    <li>Install MAMP</li>
-    <li>Start servers, set apache to 9999</li>
-    <li>Download latest wordpress</li>
-    <li>Install Sequel Pro</li>
-    <li>Go to "Socket" and click Connect (should be local, root, root). If servers don't start, turn off mysqld process in Activity Manager.</li>
-    <li>Choose database, Add database, call it wordpress.</li>
-    <li>wp-config-sample.php (rename it to wp-config.php)</li>
-    <li>open in text editor.</li>
-    <li>change database to "wordpress". username: root, password: root</li>
-    <li>go to localhost:9999 (or http://localhost:9999/wp-admin/install.php) and setup the local name etc for local files.</li>
-    <li></li>
-  </ul>
-  <ul>
-
-    <li>Work locally: go to localhost:9999/wp-admin to log in</li>
-  </ul>
-  <xmp>
-
-  </xmp>
-  </article>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <article>
-  <h3 id="create-child-theme">Create Child Theme</h3>
-  <p></p>
-  <ul>
-    <li>Use the BLANK-Theme by Chris Coyier</li>
-    <li>Create new folder in themes.</li>
-    <li>Create a style.css in that folder and enter this in there:</li>
-  </ul>
-  <xmp>
-  /*
-  Theme Name: gameface
-  Description: gameface theme based on the BLANK-Theme
-  Author: Your name here
-  Template: BLANK-Theme
-  */
-
-  @import url("../BLANK-Theme/style.css");
-
-  body {
-    background-color: green;
-  }
-  </xmp>
-
-  </article>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <h2>GH-pages</h2>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <article>
-  <h3 id="gh-pages">gh-pages</h3>
-  <p></p>
-  <ul>
-    <li></li>
-    <li></li>
-  </ul>
-  <xmp>
-
-  </xmp>
-  </article>
-
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <h2>Installations</h2>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <article>
-  <h3 id="installing-bourbon">Installing bourbon</h3>
-  <a href="http://bourbon.io/ ">Bourbon</a>
-  <br>
-  <a href="http://vimeo.com/53607127 ">Screencast tutorial</a>
-  <p>Add the following line in your Gemfile:</p>
-  <xmp>
-  gem 'bourbon'
-  </xmp>
-  <p>In the command line, enter:</p>
-  <xmp>
-  bundle install
-  </xmp>
-  <p>Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss</p>
-  <p>in application.css.scss, delete the folliwing line:</p>
-  <xmp>
-  *= require_tree .
-  </xmp>
-  <p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
-  <xmp>
-  @import "bourbon";
-  </xmp>
-  
- <p>Scout might conflict with Bourbon so use this instead:</p> 
-  <xmp>
-  sass --watch style.scss:style.css
-  </xmp>
-  </article>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <article>
-  <h3 id="installing-neat">Installing neat</h3>
-  <a href="http://neat.bourbon.io/">Neat</a>
-  <br>
-  <a href="http://vimeo.com/53607128/">Screencast tutorial</a>
-  <p>First: Install Bourbon (see above). Add the following line in your Gemfile:</p>
-  <xmp>
-  gem 'neat'
-  </xmp>
-  <p>In the command line, enter:</p>
-  <xmp>
-  bundle install
-  </xmp>
-  <p>If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:</p>
-  <xmp>
-  bundle update sass
-  </xmp>
-  <p>Within your application.css.scss file place the following on top:</p>
-  <xmp>
-  @import "bourbon";
-  @import "neat";
-  </xmp>
-  </article>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <article>
-  <h3 id="installing-bootstrap">Installing Bootstrap</h3>
-  <a href="http://bootstrap.com">Bootstrap</a>
-  <p>Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:</p>
-  <xmp>
-  @import "bootstrap.css.scss";
-  </xmp>
-  </article>
-
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-
-  <h2>Fonts</h2>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  
-
-  <article>
-  <h3>Anti-alias fonts</h3>
-  <p>Use this to make fonts look sharper</p>
-  <xmp>
-  -webkit-font-smoothing: antialiased;	
-  </xmp>
-  </article>  
-  
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  
-  <article>
-  <h3 id="fontello">Fontello</h3>
-
-  <a href="http://fontello.com/">Fontello</a>
-
-  <ul>
-    <li>Select files</li>
-    <li>Download them and place the font files in assets/fonts</li>
-    <li>In the HTML, declare the icon:</li>
-  </ul>
-  <xmp>
-  <i class="icon-export"></i>
-  </xmp>
-
-  <p>In the SCSS, make sure all the file types are called for:</p>
-  <xmp>
-  @font-face {
-  font-family: 'fontello';
-  src: url('fontello.eot');
-  src:url('fontello.eot?#iefix') format('embedded-opentype'),
-  url('fontello.svg#icomoon') format('svg'),
-  url('fontello.woff') format('woff'),
-  url('fontello.ttf') format('truetype');
-  }
-
-  [class^="icon-"]:before,
-  [class*=" icon-"]:before {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  }
-
-  .icon-export:before { content: '\e715'; } /* '' */
-  </xmp>
-  </article>
+</xmp>
+</article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
-  <h3>Font-face</h3>
-  <a href="http://www.fontsquirrel.com/tools/webfont-generator">Font-squirrel generator</a>
-  <ul>
-    <li>Use font-squirrel generator to upload files</li>
-    <li>Download them and copy paste code into css.</li>
-    <li>Make sure to place fonts in right directory (e.g. ../fonts/fontName)</li>
-  </ul>
-  </article>
+<h3 id="wp-local">Wordpress</h3>
+<p></p>
+<ul>
+<li>Install MAMP</li>
+<li>Start servers, set apache to 9999</li>
+<li>Download latest wordpress</li>
+<li>Install Sequel Pro</li>
+<li>Go to "Socket" and click Connect (should be local, root, root). If servers don't start, turn off mysqld process in Activity Manager.</li>
+<li>Choose database, Add database, call it wordpress.</li>
+<li>wp-config-sample.php (rename it to wp-config.php)</li>
+<li>open in text editor.</li>
+<li>change database to "wordpress". username: root, password: root</li>
+<li>go to localhost:9999 (or http://localhost:9999/wp-admin/install.php) and setup the local name etc for local files.</li>
+<li></li>
+</ul>
+<ul>
+
+<li>Work locally: go to localhost:9999/wp-admin to log in</li>
+</ul>
+<xmp>
+
+</xmp>
+</article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
-  <h3>Typekit locally</h3>
-  <p>Run an Apache server through MAMP. Set document root to the folder. Make sure start file is index.html</p>
-  </article>
+<h3 id="create-child-theme">Create Child Theme</h3>
+<p></p>
+<ul>
+<li>Use the BLANK-Theme by Chris Coyier</li>
+<li>Create new folder in themes.</li>
+<li>Create a style.css in that folder and enter this in there:</li>
+</ul>
+<xmp>
+/*
+Theme Name: gameface
+Description: gameface theme based on the BLANK-Theme
+Author: Your name here
+Template: BLANK-Theme
+*/
+
+@import url("../BLANK-Theme/style.css");
+
+body {
+background-color: green;
+}
+</xmp>
+
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>GH-pages</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="gh-pages">gh-pages</h3>
+<p></p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<xmp>
+
+</xmp>
+</article>
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>Installations</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="installing-bourbon">Installing bourbon</h3>
+<a href="http://bourbon.io/ ">Bourbon</a>
+<br>
+<a href="http://vimeo.com/53607127 ">Screencast tutorial</a>
+<p>Add the following line in your Gemfile:</p>
+<xmp>
+gem 'bourbon'
+</xmp>
+<p>In the command line, enter:</p>
+<xmp>
+bundle install
+</xmp>
+<p>Restart your server ("rails s" in the command line). Then rename application.css to application.css.scss</p>
+<p>in application.css.scss, delete the folliwing line:</p>
+<xmp>
+*= require_tree .
+</xmp>
+<p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+<xmp>
+@import "bourbon";
+</xmp>
+
+<p>Scout might conflict with Bourbon so use this instead:</p>
+<xmp>
+sass --watch style.scss:style.css
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="installing-neat">Installing neat</h3>
+<a href="http://neat.bourbon.io/">Neat</a>
+<br>
+<a href="http://vimeo.com/53607128/">Screencast tutorial</a>
+<p>First: Install Bourbon (see above). Add the following line in your Gemfile:</p>
+<xmp>
+gem 'neat'
+</xmp>
+<p>In the command line, enter:</p>
+<xmp>
+bundle install
+</xmp>
+<p>If you run into 'Bundler could not find compatible versions for gem "sass"', then enter:</p>
+<xmp>
+bundle update sass
+</xmp>
+<p>Within your application.css.scss file place the following on top:</p>
+<xmp>
+@import "bourbon";
+@import "neat";
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="installing-bootstrap">Installing Bootstrap</h3>
+<a href="http://bootstrap.com">Bootstrap</a>
+<p>Simple and quick way is to download the customized css file from the bootstrap site, rename it to bootstrap.css.scss and import it in the application.css.scss file after bourbon and neat:</p>
+<xmp>
+@import "bootstrap.css.scss";
+</xmp>
+</article>
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>Fonts</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+
+<article>
+<h3>Anti-alias fonts</h3>
+<p>Use this to make fonts look sharper</p>
+<xmp>
+-webkit-font-smoothing: antialiased;
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3 id="fontello">Fontello</h3>
+
+<a href="http://fontello.com/">Fontello</a>
+
+<ul>
+<li>Select files</li>
+<li>Download them and place the font files in assets/fonts</li>
+<li>In the HTML, declare the icon:</li>
+</ul>
+<xmp>
+<i class="icon-export"></i>
+</xmp>
+
+<p>In the SCSS, make sure all the file types are called for:</p>
+<xmp>
+@font-face {
+font-family: 'fontello';
+src: url('fontello.eot');
+src:url('fontello.eot?#iefix') format('embedded-opentype'),
+url('fontello.svg#icomoon') format('svg'),
+url('fontello.woff') format('woff'),
+url('fontello.ttf') format('truetype');
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+font-family: 'fontello';
+font-style: normal;
+font-weight: normal;
+speak: none;
+display: inline-block;
+}
+
+.icon-export:before { content: '\e715'; } /* '' */
+</xmp>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3>Font-face</h3>
+<a href="http://www.fontsquirrel.com/tools/webfont-generator">Font-squirrel generator</a>
+<ul>
+<li>Use font-squirrel generator to upload files</li>
+<li>Download them and copy paste code into css.</li>
+<li>Make sure to place fonts in right directory (e.g. ../fonts/fontName)</li>
+</ul>
+</article>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+<h3>Typekit locally</h3>
+<p>Run an Apache server through MAMP. Set document root to the folder. Make sure start file is index.html</p>
+</article>
 
 
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h2>Forms</h2>
+<h2>Forms</h2>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3 id="formtastic">Formtastic</h3>
+<article>
+<h3 id="formtastic">Formtastic</h3>
 
-  <a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
+<a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h3>Changing a label for an input</h3>
-  <xmp>
-  <%= f.input :defaultname, label: 'Not the default name' %>
-  If 'label:' is not used the label will read whatever the default name is.
-  </xmp>
-  </article>
+<h3>Changing a label for an input</h3>
+<xmp>
+<%= f.input :defaultname, label: 'Not the default name' %>
+If 'label:' is not used the label will read whatever the default name is.
+</xmp>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h3>Number of rows for text area</h3>
-  <xmp>
-  <%= f.input :textareaname, input_html: {rows: 10} %>
-  input_html: can be used for other things such as disabling text fields.
-  </xmp>
+<h3>Number of rows for text area</h3>
+<xmp>
+<%= f.input :textareaname, input_html: {rows: 10} %>
+input_html: can be used for other things such as disabling text fields.
+</xmp>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h3 id="simple-form">Simple form</h3>
+<h3 id="simple-form">Simple form</h3>
 
-  <a href="https://github.com/plataformatec/simple_form">Simple form</a>
+<a href="https://github.com/plataformatec/simple_form">Simple form</a>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h3>Add generic text field</h3>
+<h3>Add generic text field</h3>
 
-  <%= text_field :logo, as: :file, label: "Race Logo" %>
+<%= text_field :logo, as: :file, label: "Race Logo" %>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h3>Add class to an input</h3>
-  <xmp>
-  <%= f.button :submit, :class => "btn" %>
-  </xmp>
+<h3>Add class to an input</h3>
+<xmp>
+<%= f.button :submit, :class => "btn" %>
+</xmp>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h3>Textarea</h3>
-  <xmp>
-  <%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
-  </xmp>
+<h3>Textarea</h3>
+<xmp>
+<%= f.input :lesson, :as => :text, :input_html => { :rows => 2 } %>
+</xmp>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h2>Testing</h2>
+<h2>Testing</h2>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3>Internet Explorer</h3>
-  <ul>
-    <li>Open Network Preferences and find IP address of development mac</li>
-    <li>Make sure you are on the same wifi network with development mac and test PC laptop</li>
-    <li>In IE on the test laptop, go to http://192.168.xx.x:3000</li>
-  </ul>
-  </article>
+<article>
+<h3>Internet Explorer</h3>
+<ul>
+<li>Open Network Preferences and find IP address of development mac</li>
+<li>Make sure you are on the same wifi network with development mac and test PC laptop</li>
+<li>In IE on the test laptop, go to http://192.168.xx.x:3000</li>
+</ul>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3>iPhone and iPad</h3>
-  <ul>
-    <li>Open Network Preferences and find IP address of development mac</li>
-    <li>Make sure you are on the same wifi network with development mac and iPhone/iPad</li>
-    <li>In safari on the iPhone/iPad, go to 192.168.xx.x:3000</li>
-  </ul>
-  </article>
+<article>
+<h3>iPhone and iPad</h3>
+<ul>
+<li>Open Network Preferences and find IP address of development mac</li>
+<li>Make sure you are on the same wifi network with development mac and iPhone/iPad</li>
+<li>In safari on the iPhone/iPad, go to 192.168.xx.x:3000</li>
+</ul>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 
-  <article>
-  <h3>Debugging iOS Simluator</h3>
-  <ul>
-    <li>Open iOS Simulator (in terminal: open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app)</li>
-    <li>iOS Sim: Go Settings > Safari > Advanced and turn on Web Inspector</li>
-    <li>iOS Sim: Open Safari on the page you want to inspect</li>
-    <li>On laptop: Open Safari. Go Develop > iOS Simulator and select localhost</li>
-  </ul>
-  </article>
+<article>
+<h3>Debugging iOS Simluator</h3>
+<ul>
+<li>Open iOS Simulator (in terminal: open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app)</li>
+<li>iOS Sim: Go Settings > Safari > Advanced and turn on Web Inspector</li>
+<li>iOS Sim: Open Safari on the page you want to inspect</li>
+<li>On laptop: Open Safari. Go Develop > iOS Simulator and select localhost</li>
+</ul>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 
 <article>
@@ -459,21 +459,21 @@ git branch -m old_branch new_branch
 <p>Anything that needs a tweak for IE below version 10 can be called like so:</p>
 <xmp>
 .ie {
-  .theclass {
-    background-color: red;
-  }
+.theclass {
+background-color: red;
+}
 </xmp>
 
 <p>From <a href="http://css-tricks.com/how-to-create-an-ie-only-stylesheet/">Chris Coyier</a></p>
 <xmp>
 Target ALL VERSIONS of IE
 <!--[if IE]>
-  <link rel="stylesheet" type="text/css" href="all-ie-only.css" />
+<link rel="stylesheet" type="text/css" href="all-ie-only.css" />
 <![endif]-->
 Target everything EXCEPT IE
 <!--[if !IE]><!-->
 <link rel="stylesheet" type="text/css" href="not-ie.css" />
- <!--<![endif]-->
+<!--<![endif]-->
 Target IE 7 ONLY
 <!--[if IE 7]>
 <link rel="stylesheet" type="text/css" href="ie7.css">
@@ -535,60 +535,60 @@ Target IE 8 and HIGHER
 </xmp>
 </article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h2>Jekyll</h2>
+<h2>Jekyll</h2>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3>Install Jekyll</h3>
-  <a href="http://vimeo.com/63387028">Tutorial</a>
-  <ul>
-    <li>mkdir Magnus-G.github.com</li>
-    <li>jekyll new Magnus-G.github.com</li>
-    <li>jekyll build</li>
-    <li>jekyll serve</li>
-    <li>localhost:4000</li>
-    <li>in folder: git init</li>
-    <li>in folder: touch .gitignore</li>
-    <li>in .gitignore: _site</li>
-    <li>add and commit</li>
-    <li>create repo on github Magnus-G.github.com</li>
-    <li>git remote add origin git@github.com:Magnus-G/Magnus-G.github.com.git</li>
-    <li>git push -u origin master</li>
-    <li>go to: magnus-g.github.com</li>
-  </ul>
-  </article>
+<article>
+<h3>Install Jekyll</h3>
+<a href="http://vimeo.com/63387028">Tutorial</a>
+<ul>
+<li>mkdir Magnus-G.github.com</li>
+<li>jekyll new Magnus-G.github.com</li>
+<li>jekyll build</li>
+<li>jekyll serve</li>
+<li>localhost:4000</li>
+<li>in folder: git init</li>
+<li>in folder: touch .gitignore</li>
+<li>in .gitignore: _site</li>
+<li>add and commit</li>
+<li>create repo on github Magnus-G.github.com</li>
+<li>git remote add origin git@github.com:Magnus-G/Magnus-G.github.com.git</li>
+<li>git push -u origin master</li>
+<li>go to: magnus-g.github.com</li>
+</ul>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <h2>Heroku</h2>
+<h2>Heroku</h2>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-  <article>
-  <h3>Upload a site to Heroku</h3>
-  <p>Go to the folder and type in terminal:</p>
-  <ul>
-    <li>git init</li>
-    <li>git add .</li>
-    <li>git commit -m "first"</li>
-    <li>heroku create</li>
-    <li>git push heroku master</li>
-    <li>heroku open</li>
-  </ul>
-  </article>
+<article>
+<h3>Upload a site to Heroku</h3>
+<p>Go to the folder and type in terminal:</p>
+<ul>
+<li>git init</li>
+<li>git add .</li>
+<li>git commit -m "first"</li>
+<li>heroku create</li>
+<li>git push heroku master</li>
+<li>heroku open</li>
+</ul>
+</article>
 
-  <!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 
 
-	
+
 </section> <!-- the whole page's main content section -->
 
 
