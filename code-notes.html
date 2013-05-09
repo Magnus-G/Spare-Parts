@@ -255,6 +255,13 @@ bundle update sass
 @import "bourbon";
 @import "neat";
 </xmp>
+
+<p>Override the default grid settings: create a _grid-settings.scss. Make sure to import it right before importing Neat:</p>
+<xmp>
+@import "bourbon/bourbon"; // or "bourbon" when in Rails
+@import "grid-settings";
+@import "neat/neat"; // or "neat" when in Rails
+</xmp>
 </article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
