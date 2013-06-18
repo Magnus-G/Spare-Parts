@@ -73,7 +73,8 @@ header .header-controls {
 
 /* line 108, style.scss */
 p {
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 17px;
   color: #575757;
 }
 
