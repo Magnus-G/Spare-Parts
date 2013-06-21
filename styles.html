@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spare Parts</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" />
+
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Spare Parts</a></li>
+        <li><a href="rails.html">Rails</a></li>
+        <li><a href="code-notes.html">Code Notes</a></li>
+        <li><a href="styles.html">Styles</a></li>
+      </ul>
+    </nav>
+    <a href="https://github.com/Magnus-G/Spare-Parts/edit/gh-pages/styles.html"><div class="header-controls">Edit</div></a>
+  </div>
+</header>
+
+
+<div class="container">
+<div id="example1">
+
+<section> <!-- whole page main content section -->
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<h2>SCSS Styles for Icon fonts</h2>
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+<article>
+  <h3>Light from above</h3>
+  <div class="style-light-from-above dark-background ">
+    <i class="icon icon-star"></i>
+    <i class="icon icon-check"></i>
+    <i class="icon icon-cancel"></i>
+  </div>
+
+<xmp>
+<div class="style-light-from-above">
+  <i class="icon icon-star"></i>
+</div>
+--------------------------------------------------------------------
+@mixin text-gradient ($top, $bottom) {
+  color: $bottom;
+  background: -webkit-linear-gradient($top, $bottom);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin blend-layer($color, $edge-sharpness, $transparentize) {
+  // covers the whole icon and adds drop shadow.
+  text-shadow: 0 1px $edge-sharpness transparentize($color, $transparentize);
+}
+
+.style-light-from-above {
+  // remove :before if using style for text and not icon font
+  .icon-star:before {
+    // text-shadow with transparency
+    @include blend-layer(red, 2px, 0.5);
+    // this has to be on the actual font content
+    @include text-gradient(white, darken(red, 10));
+  }
+}
+</xmp>
+</article>
+
+<article>
+  <h3>Inset</h3>
+<div class="style-inset light-background">
+  <i class="icon icon-star"></i>
+  <i class="icon icon-check"></i>
+  <i class="icon icon-cancel"></i>
+</div>
+</article>
+
+<article>
+  <h3>Gloss</h3>
+<div class="style-gloss light-background">
+  <i class="icon icon-star"></i>
+  <i class="icon icon-check"></i>
+  <i class="icon icon-cancel"></i>
+</div>
+</article>
+
+<article>
+  <h3>Bla</h3>
+<div class="style-inset light-background">
+  <div class="style-circle-inset center">
+    <i class="icon icon-star"></i>
+  </div>
+  <div class="style-circle-inset center">
+    <i class="icon icon-check"></i>
+  </div>
+  <div class="style-circle-inset center">
+    <i class="icon icon-cancel"></i>
+  </div>
+</div>
+</article>
+
+<article>
+  <h3>Bla</h3>
+<div class="style-inset light-background">
+  <div class="style-circle-groove center">
+    <i class="icon icon-star"></i>
+  </div>
+  <div class="style-circle-groove center">
+    <i class="icon icon-check"></i>
+  </div>
+  <div class="style-circle-groove center">
+    <i class="icon icon-cancel"></i>
+  </div>
+</div>
+</article>
+
+
+
+</section> <!-- the whole page's main content section -->
+</div><!-- example1 as in the automatic TOC -->
+</div><!-- container -->
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>
+<script type='text/javascript' src='lib/jquery.erToc.min.js'></script>
+<script type='text/javascript'>
+$(document).ready(function() {
+    $('#example1').erToc({'goTopNode':'#example1', 'startLevel': 'h2', 'numberedSuffix':'. '});
+    $('#example2').erToc({'goTopNode':'#example2', 'startLevel': 'h2', 'tocScroll': false});
+    $('#example3').erToc({'goTopNode':'#example3', 'startLevel': 'h2', 'numbered': false, 'tocClass': 'er_toc er_toc_disc'});
+});
+</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
