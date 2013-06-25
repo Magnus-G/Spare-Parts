@@ -2,7 +2,7 @@ $radius: 3px;
 $font-size: 12px;
 $margin-document: $font-size *2;
 $header-height: 60px;
-$width: 1200px;
+$width: 100%;
 
 $default-color: #F3F3ED;
 $font-color: darken(desaturate($default-color, 50), 60);
@@ -57,7 +57,7 @@ html {
 }
 
 body {
-  background-color: $default-color;
+  background-color: lighten($default-color, 3);
   font-family: helvetica;
   height: 100%;
   margin: 0;
@@ -65,6 +65,7 @@ body {
 
 .container {
   max-width: $width;
+  padding: 0 40px;
   margin: auto;
 }
 
@@ -136,8 +137,9 @@ h1 {
 
 h2 {
   color: $font-color;
+  font-size: $font-size *3;
   line-height: $font-size *3;
-  border-bottom: 1px solid lighten($font-color, 40);
+  // border-bottom: 1px solid lighten($font-color, 40);
 }
 
 h3 {
@@ -195,9 +197,10 @@ section {
 }
 
 xmp {
-  @include inset-area($default-color);
+  @include inset-area(darken($default-color, 6));
   border-radius: $radius;
   color: $font-color;
+  text-shadow: 0 1px 2px white;
   margin: 0;
   margin-bottom: $font-size *3;
   padding: 0 $font-size *2 $font-size $font-size *2;
@@ -229,6 +232,12 @@ xmp {
         color: transparentize($contrast-dark-color, 0);
         font-weight: normal;
         text-transform: none;
+        margin-bottom: -2px;
+
+        a {
+          font-size: 11px;
+          line-height: 0;
+        }
       }
     }
   }
@@ -385,6 +394,7 @@ $circle-diameter: 90px;
   background: -webkit-linear-gradient($top, $bottom);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 @mixin text-gloss ($color-top, $color-top-mid, $color-bottom-mid, $color-bottom) {
@@ -392,6 +402,7 @@ $circle-diameter: 90px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-top), color-stop(50%,$color-top-mid), color-stop(51%,$color-bottom-mid), color-stop(100%,$color-bottom));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 @mixin blend-layer($color, $edge-sharpness, $transparentize) {
