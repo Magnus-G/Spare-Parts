@@ -128,6 +128,91 @@ $information-color: desaturate(blue, 50);
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
+<h3>iPhone on-off switch</h3>
+<xmp>
+<div class="onoffswitch">
+  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" unchecked>
+  <label class="onoffswitch-label" for="myonoffswitch">
+    <div class="onoffswitch-inner"></div>
+    <div class="onoffswitch-switch"></div>
+  </label>
+</div>
+
+.onoffswitch {
+  position: relative; 
+  width: 70px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 20px;
+  padding: 0;
+  line-height: 20px;
+  color: white;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: green;
+  color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE; 
+  color: #999999;
+  text-align: right;
+}
+.onoffswitch-switch {
+  width: 30px; margin: 2px;
+  background: #FFFFFF;
+  border: 1px solid gray;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 36px;
+  -moz-transition: all 0.3s ease-in 0s; 
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s; 
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+</xmp>
+</article>
+
+<article>
 <h3>Adding multiple borders to element</h3>
 <p><a href="http://nicolasgallagher.com/multiple-backgrounds-and-borders-with-css2/">From here</a></p>
 <xmp>
@@ -135,8 +220,8 @@ $information-color: desaturate(blue, 50);
    position:relative;
    z-index:1;
    padding:30px;
-   border:5px solid #f00;
-   background:#ff9600;
+   border:5px solid red;
+   background: orange;
 }
 
 .borders:before {
@@ -147,8 +232,8 @@ $information-color: desaturate(blue, 50);
    left:5px;
    right:5px;
    bottom:5px;
-   border:5px solid #ffea00;
-   background:#4aa929;
+   border:5px solid yellow;
+   background: green;
 }
 </xmp>
 </article>

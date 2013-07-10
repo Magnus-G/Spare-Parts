@@ -389,12 +389,24 @@ display: inline-block;
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
+<h3>Chosen</h3>
+<a href="http://harvesthq.github.io/chosen/">Chosen</a>
+<ul>
+<li>Download files</li>
+<li>Put the css file in vendor>assets>stylesheets. Rename chosen.css to chosen.scss if it's a rails project and call it from application.css.scss</li>
+<li>Put the chosen.jquery.js in vendor>assets>javascripts. Call it from application.js.coffee with #= require chosen.jquery</li>
+<li>Add #= require filename to application.js.coffee and create filename.js.coffee</li>
+<li>In filename.js.coffee enter this to apply chosen to any element with the .chzn-select class on it:</li>
+</ul>
+<xmp>
+$ ->
+  $('.chzn-select').chosen()
+</xmp>
+</article>
+
+<article>
 <h3 id="formtastic">Formtastic</h3>
-
 <a href="http://rdoc.info/github/justinfrench/formtastic">Formtastic</a>
-
-<!-- /////////////////////////////////////////////////////////////////////////////// -->
-
 <h3>Changing a label for an input</h3>
 <xmp>
 <%= f.input :defaultname, label: 'Not the default name' %>
