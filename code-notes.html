@@ -53,6 +53,14 @@ git rebase name-of-others-branch
 </article>
 
 <article>
+<h3>Remove commits and revert to origin/master</h3>
+<p>E.g. you have "# Your branch is ahead of 'origin/master' by 2 commits" and want to get rid of it all, return to what's on remote master</p>
+<xmp>
+git reset --hard origin/master
+</xmp>
+</article>
+
+<article>
 <h3 id="undo-a-certain-file">Undo a certain file</h3>
 <p>Checkout the filename or the folder you want to undo</p>
 <xmp>
