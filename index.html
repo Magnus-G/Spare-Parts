@@ -824,12 +824,12 @@ header {
 <h3 id="sticky-footer">Sticky Footer</h3>
 <xmp>
 <div class="stickyfooter">
-  <div class="content">
+  <div class="stickyfooter-content">
     ...content...
-    <div class="push"></div>
-  </div>
-  <div class="footer"></div>
-</div>
+    <div class="stickyfooter-push"></div><!--stickyfooter-push-->
+  </div><!--stickyfooter-content-->
+  <div class="footer"></div><!--footer-->
+</div><!--stickyfooter-->
 
 
 .stickyfooter {
@@ -842,7 +842,7 @@ header {
   background-color: black;
   height: 500px;
 }
-.push {
+.stickyfooter-push {
  height: 500px;
 }
 </xmp>
