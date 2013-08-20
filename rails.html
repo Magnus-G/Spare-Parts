@@ -317,8 +317,11 @@ def <name of the html you are working in>
 <xmp>
 <%= render purchaseable.events, section: purchaseable %>
 </xmp>
-<p>This renders an array of events from the 'events' folder</p>
-
+<p>Above renders an array of events from the 'events' folder</p>
+<xmp>
+<%= render @industry_articles %>
+</xmp>
+<p>Above looks for "article" partial in the folder "articles" and passes in "industry" as the category for it.</p>
 </article>
 
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
