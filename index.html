@@ -823,27 +823,33 @@ header {
 <article>
 <h3 id="sticky-footer">Sticky Footer</h3>
 <xmp>
-<div class="stickyfooter">
-  <div class="stickyfooter-content">
-    ...content...
-    <div class="stickyfooter-push"></div><!--stickyfooter-push-->
-  </div><!--stickyfooter-content-->
-  <div class="footer"></div><!--footer-->
-</div><!--stickyfooter-->
+<div class="sticky-wrapper">
+  <p>This code is from http://ryanfait.com/</p>
+  <div class="push"></div>
+</div><!--sticky-wrapper-->
+<div class="footer">
+  <p>Footer</p>
+</div>
 
 
-.stickyfooter {
+
+html, body {
+ height: 100%;
+}
+
+.sticky-wrapper {
   min-height: 100%;
-  height:auto !important;
+  height: auto !important;
   height: 100%;
-  margin: 0 auto -500px;
+  margin: 0 auto -4em;
 }
+
+.footer, .push {
+  height: 4em;
+}
+
 .footer {
-  background-color: black;
-  height: 500px;
-}
-.stickyfooter-push {
- height: 500px;
+  background-color: gray;
 }
 </xmp>
 </article>
