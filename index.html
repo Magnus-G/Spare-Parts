@@ -912,6 +912,32 @@ table tr:nth-child(even) {
 <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <article>
+<h3>Add class</h3>
+<xmp>
+<style>
+  .addition {
+    background-color: teal;
+  }
+</style>
+
+<h1>Click here</h1>
+<h2>Adding class "addition" here</h2>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $("h1").click(function() {
+      $("h2").addClass("addition");
+    });
+  });
+</script>
+</script>
+</xmp>
+
+</article>
+
+
+<article>
 <h3 id="smooth-scroll">Smooth Scroll</h3>
 <p>In head:</p>
 <xmp>
